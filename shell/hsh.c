@@ -12,7 +12,7 @@ if (!buf)
         return (NULL);
 return (buf);
 }
-*/
+
 int _strcspn(char *buf, char c)
 {
 int i, n;
@@ -28,7 +28,7 @@ for (i = 0, n = (int)strlen(buf) ; i < n; i++)
 }
 return (0);
 }
-
+*/
 int hsh(int argc, char **argv)
 {
   int result;
