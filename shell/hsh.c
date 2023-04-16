@@ -51,7 +51,8 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   printf("interactive mode\n");
   
   do{
-  _putchar('$');
+  putchar('$');
+  
   read = getline(&buffer, &len, stdin);
   
   /*TODO: we have to remove the new line from buffer*/
