@@ -22,6 +22,7 @@ int _get_word_count(char *str, char *delim);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
 int _tokenize(char **av, char **argv, int argc);
+int _strcspn(char *buf, char c);
 
 
 
