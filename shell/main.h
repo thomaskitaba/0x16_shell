@@ -12,6 +12,7 @@
 #define WORD_COUNT 100
 #define BUFFER_SIZE 1024
 
+int _putchar(char c);
 int _exceve(char **av, char **env);
 int _strtok(char *str, char *delim, char **token);
 int _strlen(char *str);
