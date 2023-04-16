@@ -22,3 +22,29 @@ for (i = 1, k = 0; i < argc; i++)
 av[argc-1] = NULL;
 return (0);
 }
+
+/**
+ * _strtok - string to words
+ * @str: string
+ * @delim: delimeter
+ * Return: int 
+ */
+int _strtok(char *str, char *delim, char **token)
+{
+int i, w_count, total_w_len;
+char *word, *str_cpy;
+
+w_count = 0;
+total_w_len = 0;
+str_cpy = strdup(str);
+
+word = strtok(str_cpy, delim);
+
+while(word && w_count <= WORD_COUNT)
+{
+  strcpy(token[w_count], word);
+  w_count++;
+  word = strtok(NULL, delim); 
+}
+return (w_count);
+}
