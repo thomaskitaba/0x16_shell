@@ -48,10 +48,10 @@ int hsh(int argc, char **argv)
 this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {
-  printf("interactive mode");
-  return (0);
+  printf("interactive mode\n");
+  
   do{
-  putchar('$');
+  _putchar('$');
   read = getline(&buffer, &len, stdin);
   
   /*TODO: we have to remove the new line from buffer*/
@@ -81,8 +81,8 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   tokenize_cmd (av, ar, av)*/
 else
 {
-  printf("command line mode");
-  return (0);
+  printf("command line mode\n");
+  
 /*tokenize the argv arguments */
 /*send them to execve*/
 }
