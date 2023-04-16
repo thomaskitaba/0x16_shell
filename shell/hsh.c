@@ -3,10 +3,7 @@
 #include <stdlib.h>
 #include "main.h"
 
-/**
- * create_buffer - create buffer
- * Return: buffer
- */
+/*
 char *create_buffer(void)
 {
         char *buf;
@@ -15,11 +12,7 @@ if (!buf)
         return (NULL);
 return (buf);
 }
-/**
-* _strcspn - find \\n and replace it with \0 
-*@c: char to be searched
-*Return: replace buf
-*/
+
 int _strcspn(char *buf, char c)
 {
 int i, n;
@@ -35,7 +28,7 @@ for (i = 0, n = (int)strlen(buf) ; i < n; i++)
 }
 return (0);
 }
-
+*/
 int hsh(int argc, char **argv)
 {
   int result;
