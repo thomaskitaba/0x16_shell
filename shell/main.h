@@ -17,10 +17,12 @@ int _exceve(char **av, char **env);
 int _strtok(char *str, char *delim, char **token);
 int _strlen(char *str);
 void _free_2D(char **token, int rows);
+char *create_buffer(void);
 int _get_word_count(char *str, char *delim);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
 int _tokenize(char **av, char **argv, int argc);
+
 
 
 #endif
