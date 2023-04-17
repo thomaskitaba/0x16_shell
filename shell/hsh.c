@@ -66,7 +66,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   if (read > 0)
   {
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
-  /*TODO: convert */
+  _tokenize_string(buffer);
   }
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }

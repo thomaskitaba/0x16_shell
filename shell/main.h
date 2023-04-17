@@ -21,8 +21,11 @@ char *create_buffer(void);
 int _get_word_count(char *str, char *delim);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
+int _tokenize_string(char *str);
 int _tokenize(char **av, char **argv, int argc);
 int _strcspn(char *buf, char c);
+
+void _print_2d(char **av, int argc);
 
 
 
