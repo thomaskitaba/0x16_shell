@@ -4,7 +4,7 @@
  * @str: string to be tokenized
  * Return: 1 on success, -1 on failur
  */
-char **tokenize_string(char *str, char **token)
+char **tokenize_string(char *str, char **token, int *len)
 {
   /*char str[] = "thomas kitaba feyissa";*/
   char *delimeter = " ";
@@ -14,7 +14,7 @@ char **tokenize_string(char *str, char **token)
 
   w_count = _strtok(str, delimeter, token);
   _print_2d(token, w_count + 1);
-  
+  *len = (w_count + 1);
   
   /*free memory */
   _free_2D(token, w_count);
