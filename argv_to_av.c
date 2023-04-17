@@ -42,9 +42,7 @@ for (i = 0; i < argc; i++)
   av[i] = (char *)malloc(sizeof(char) * 100);
   /*TODO: add NULL check*/
 }
-
 _to_cmd(av, argv, argc);
-
 _print_2d(av, argc);
 printf("\n");
 k = execve(av[0], av, NULL);
