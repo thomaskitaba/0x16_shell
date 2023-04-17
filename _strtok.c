@@ -3,7 +3,20 @@
 #include <string.h>
 #define WORD_SIZE 100
 #define WORD_COUNT 100
-
+/**
+ * _print_2d - print 2D array
+ * @av: argument vector
+ * @argc: argument count
+ * Return: void
+ */
+void _print_2d(char **av, int argc)
+{
+  int i; 
+for (i = 0; i < argc - 1; i++)
+{
+  printf("%s\n", av[i]);
+}
+}
 /**
  * _free_2D - free 2D array
  * @2d: 2d array
@@ -92,11 +105,7 @@ for (i = 0; i < WORD_SIZE; i++)
   token[i] = (char *)malloc(sizeof(char) * WORD_SIZE);
 }
   w_count = _strtok(str, delimeter, token);
-  printf("%d", w_count);
-  for (i = 0; i < w_count; i++)
-  {
-    printf("%s\n", token[i]);
-  }
+  _print_2d(token, w_count + 1);
   /*free memory */
   _free_2D(token, w_count);
   return (0);
