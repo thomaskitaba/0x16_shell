@@ -27,6 +27,4 @@ int _strcspn(char *buf, char c);
 
 void _print_2d(char **av, int argc);
 
-
-
 #endif

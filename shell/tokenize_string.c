@@ -9,13 +9,13 @@ char **tokenize_string(char *str, char **token)
   /*char str[] = "thomas kitaba feyissa";*/
   char *delimeter = " ";
   int i, w_count;
-  /*char **token;
-  
   w_count = 0;
   /*malloc for 2d array **token  row*/
 
   w_count = _strtok(str, delimeter, token);
   _print_2d(token, w_count + 1);
+  
+  
   /*free memory */
   _free_2D(token, w_count);
   return (token);
