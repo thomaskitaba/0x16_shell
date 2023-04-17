@@ -11,7 +11,7 @@
 int _execve(char **av, char **env)
 {
 char *av_tem[] = {"/bin/ls", "-l", NULL};
-if (execve("/bin/ls", av_tem, NULL) == -1)
+if (execve(av_tem[0], av_tem, NULL) == -1)
 {
     perror("Error:");
     exit(1);
