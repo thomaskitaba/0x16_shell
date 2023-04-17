@@ -19,7 +19,7 @@ for (i = 0; i < WORD_SIZE; i++)
 }
   w_count = _strtok(str, delimeter, token);
   _print_2d(token, w_count + 1);
-  _exceve(token, NULL);
+  _execve(token, NULL);
   /*free memory */
   _free_2D(token, w_count);
   return (0);

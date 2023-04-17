@@ -3,7 +3,7 @@
 #include <stdlib.h>
 #include "main.h"
 /**
- * _exceve - execve 
+ * _execve - execve 
  * @av: 2D of CL arguments
  * @env: environment variable
  * Return: Always 0.

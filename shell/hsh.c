@@ -75,7 +75,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   pid = fork();
   if (pid == 0)
   {
-    _execve(av_temp[0], av_temp, NULL);
+    _execve(av_temp, NULL);
   }
   }
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
