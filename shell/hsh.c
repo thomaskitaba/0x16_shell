@@ -7,7 +7,6 @@ int hsh(int argc, char **argv)
 {
   int i, result, w_len;
   char *buffer;
-  char **temp;
   ssize_t read;
   size_t len;
   pid_t pid;
@@ -48,8 +47,8 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   {
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
   w_len = 0;
-  temp = tokenize_string(buffer, av_token, &w_len);
-  _print_2d(temp, 2);
+  tokenize_string(buffer, av_token, &w_len);
+  
   /*send tokenized 2D array to execve()*/
   /*fork here*/
   }
