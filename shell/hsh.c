@@ -47,7 +47,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   {
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
   w_len = 0;
-  tokenize_string(buffer, av_token, &w_len);
+  av_token = tokenize_string(buffer, av_token, &w_len);
   printf("%s\n", av_token[0]);
   /*send tokenized 2D array to execve()*/
   /*fork here*/
