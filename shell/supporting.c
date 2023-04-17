@@ -5,7 +5,6 @@
  * @argc: argument count
  * Return: void
  */
-
 void _print_2d(char **av, int argc)
 {
   int i; 

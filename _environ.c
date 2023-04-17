@@ -9,7 +9,6 @@ int main(int argc, char **argv) {
     for (char **env = environ; *env != NULL; env++) {
         printf("%s\n", *env);
     }
-
     // Accessing the value of the "COMPUTERNAME" environment variable
     char *computer_name = getenv("COMPUTERNAME");
     if (computer_name != NULL) {
@@ -17,6 +16,6 @@ int main(int argc, char **argv) {
     } else {
         printf("COMPUTERNAME environment variable not found\n");
     }
-
+    
     return 0;
 }

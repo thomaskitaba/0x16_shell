@@ -29,6 +29,7 @@ for (i = 0, n = (int)strlen(buf) ; i < n; i++)
 return (0);
 }
 */
+
 int hsh(int argc, char **argv)
 {
   int result;
@@ -67,8 +68,6 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   {
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
   tokenize_string(buffer);
-  /*send tokenized 2D array to execve()*/
-  
   }
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
