@@ -8,10 +8,8 @@
  * Return: Always 0.
  */
 
-int _exceve(char **av, char **env)
+int _execve(char **av, char **env)
 {
-
-
 
 if (execve(av[0], av, NULL) == -1)
 {
