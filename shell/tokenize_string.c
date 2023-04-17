@@ -1,4 +1,23 @@
 #include "main.h"
+/**
+ * _print_2d - print 2D array
+ * @av: argument vector
+ * @argc: argument count
+ * Return: void
+ */
+void _print_2d(char **av, int argc)
+{
+  int i; 
+for (i = 0; i < argc - 1; i++)
+{
+  printf("%s\n", av[i]);
+}
+}
+/**
+ * tokenize_string - change string to 2D array
+ * @str: string to be tokenized
+ * Return: 1 on success, -1 on failur
+ */
 int tokenize_string(char *str)
 {
   /*char str[] = "thomas kitaba feyissa";*/
