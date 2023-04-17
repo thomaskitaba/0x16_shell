@@ -36,7 +36,10 @@ int hsh(int argc, char **argv)
   char eof[1];
   ssize_t read;
   size_t len;
+  pid_t pid;
   buffer = create_buffer();
+char *av_temp[] = {"/bin/ls", "-l", NULL};
+
 /*if ac == 1 && av[0] = "./hsh"
 this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
@@ -68,7 +71,12 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
   tokenize_string(buffer);
   /*send tokenized 2D array to execve()*/
-  
+  /*fork here*/
+  pid = fork();
+  if (pid == 0)
+  {
+    _execve(av_temp[0], av_temp, NULL);
+  }
   }
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
