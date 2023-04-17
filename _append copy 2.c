@@ -65,8 +65,6 @@ for (i = 0; i < argc - 1; i++)
   printf("%s\n", new_arg_0);
   /* end of append */
 
-  
-  
   free(new_arg_0); // Free the allocated memory
   _free_2D(av, argc - 1);
   return 0;
