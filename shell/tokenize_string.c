@@ -15,7 +15,7 @@ char **tokenize_string(char *str, char **token, int *len)
   w_count = _strtok(str, delimeter, token);
   _print_2d(token, w_count + 1);
   *len = (w_count + 1);
-  printf("we are here");
+  printf("we are here\n");
   /*free memory */
   _free_2D(token, w_count);
   return (token);
