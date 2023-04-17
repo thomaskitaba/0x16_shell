@@ -1,5 +1,5 @@
 #include "main.h"
-int _tokenize_string(char *str)
+int tokenize_string(char *str)
 {
   /*char str[] = "thomas kitaba feyissa";*/
   char *delimeter = " ";
