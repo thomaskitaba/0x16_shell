@@ -10,6 +10,6 @@ void _print_2d(char **av, int argc)
   int i; 
 for (i = 0; i < argc - 1; i++)
 {
-  printf("%s\n", av[i]);
+  printf("%s\t", av[i]);
 }
 }
