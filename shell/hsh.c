@@ -3,32 +3,17 @@
 #include <stdlib.h>
 #include "main.h"
 
-/*
-char *create_buffer(void)
+int _execve(char **av, char **env)
 {
-        char *buf;
-buf = malloc(sizeof(char) * BUFFER_SIZE);
-if (!buf)
-        return (NULL);
-return (buf);
+/*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
+if (execve(av[0], av, ) == -1)
+{
+    perror("Error:");
+    exit(1);
+}
+return (0);
 }
 
-int _strcspn(char *buf, char c)
-{
-int i, n;
-if (!buf)
-return (0);
-for (i = 0, n = (int)strlen(buf) ; i < n; i++)
-{
-  if (buf[i] == c)
-  {
-    return (i);
-    break;
-  }
-}
-return (0);
-}
-*/
 int hsh(int argc, char **argv)
 {
   int result;

@@ -8,10 +8,10 @@
  * Return: Always 0.
  */
 
-int _execve(char *av[], char **env)
+int _execve(char **av, char **env)
 {
 /*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
-if (execve(av[0], av, NULL) == -1)
+if (execve(av[0], av, env) == -1)
 {
     perror("Error:");
     exit(1);
