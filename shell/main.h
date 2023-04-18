@@ -13,8 +13,8 @@
 #include <errno.h>
 
 #define MAX_WORDS 100
-#define MAX_WORD_LENGTH 100
-#define WORD_SIZE 100
+#define MAX_WORD_LENGTH 1024
+#define WORD_SIZE 1024
 #define WORD_COUNT 100
 #define BUFFER_SIZE 1024
 

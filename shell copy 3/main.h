@@ -24,7 +24,7 @@ int hsh(int argc, char **argv);
 char **tokenize_string(char *str, char **token, int *len);
 int _tokenize(char **av, char **argv, int argc);
 int _strcspn(char *buf, char c);
-
+char* add_path(char *path_arg, char *path_buffer);
 void _print_2d(char **av, int argc);
 
 #endif

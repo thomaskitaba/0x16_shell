@@ -37,11 +37,25 @@ char* add_path(char *path_arg, char *path_buffer)
   default_len = _strlen(default_path);
   path_len = _strlen(path_arg);
   need_correction = 0;
+/*
+if path_arg initial != "/bin/"
+append /bin/ to path_arg
+return (path_buffer)
+ 
+  if path_len <= 5;
+    printf(error: it is directory not path)
+  else
+    append;
+else
+    return (NULL)
+*/
+if (!path_arg)
+return (NULL); /*TODO: check this out latter*/
 
 /*check if /bin/ exitst in path_arg*/
 for (i = 0; i < default_len; i++)
 {
-  if (default_path[i] != path_arg[i])
+  if (path_buffer[i] != path_arg[i])
   {
     need_correction = 1;
     break;
@@ -55,7 +69,6 @@ if (need_correction == 1)
   for (i = default_len; i < default_len + path_len; i++)
   {
     path_buffer[i] = path_arg[k];
-    k++;
   }
   path_buffer[i] = '\0';
   return (path_buffer);
@@ -66,7 +79,6 @@ if (need_correction == 0)
 if (path_len <= 5)
   {
     printf("it is a directory");
-    free(path_buffer);
     return (NULL);
   }
   else
@@ -100,15 +112,17 @@ append path to ls and return 1  else return -1}
 */
 buffer = add_path(word, buffer);
 /*if path was corrected and added */
+if (buffer){
 
+}
 while(word && w_count <= WORD_COUNT)
 {
   if (w_count == 0 && buffer){
     strcpy(token[w_count], buffer);
   }
-  else
+  else{
   strcpy(token[w_count], word);
-  
+  }
   w_count++;
   word = strtok(NULL, delim); 
 }
@@ -116,7 +130,8 @@ while(word && w_count <= WORD_COUNT)
 token[w_count] = NULL;
 /*TODO: add token to info_t->argc   and info_t->argv*/
 /*TODO*/
-
+/*TODO*/
+/*TODO*/
 free(buffer);
 return (w_count);
 }
