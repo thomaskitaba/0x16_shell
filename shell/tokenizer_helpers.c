@@ -49,13 +49,12 @@ return (path_buffer)
 else
     return (NULL)
 */
-if (!path_arg)
-return (NULL); /*TODO: check this out latter*/
+
 
 /*check if /bin/ exitst in path_arg*/
 for (i = 0; i < default_len; i++)
 {
-  if (path_buffer[i] != path_arg[i])
+  if (default_path[i] != path_arg[i])
   {
     need_correction = 1;
     break;
@@ -69,6 +68,7 @@ if (need_correction == 1)
   for (i = default_len; i < default_len + path_len; i++)
   {
     path_buffer[i] = path_arg[k];
+    k++;
   }
   path_buffer[i] = '\0';
   return (path_buffer);
