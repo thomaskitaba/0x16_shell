@@ -20,7 +20,7 @@ if (execve(av[0], av, env) == -1){
     exit(1);
 }
 }
-elseif (child_pid > 0){
+else if (child_pid > 0){
 wait();
 return (0);
 }
