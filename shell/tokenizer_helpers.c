@@ -100,7 +100,7 @@ append path to ls and return 1  else return -1}
 */
 buffer = add_path(word, buffer);
 if (!buffer)
-  return (NULL);
+  return (-1);
 /*if path was corrected and added */
 
 while(word && w_count <= WORD_COUNT)

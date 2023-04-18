@@ -12,7 +12,7 @@ char **tokenize_string(char *str, char **token, int *len)
   w_count = 0;
   /*malloc for 2d array **token  row*/
   w_count = _strtok(str, delimeter, token);
-  if (w_count == 0)
+  if (w_count == -1)
   return (NULL);
   _print_2d(token, w_count + 1);
   
