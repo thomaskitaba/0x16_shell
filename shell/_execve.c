@@ -1,5 +1,3 @@
-#include <stdio.h>
-#include <unistd.h>
 #include "main.h"
 /**
  * _execve - execve 
@@ -10,6 +8,7 @@
 int _execve(char **av, char **env)
 {
 /*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
+int status;
 pid_t parent_id, child_pid;
 child_pid = fork();
 
@@ -21,12 +20,11 @@ if (execve(av[0], av, env) == -1){
 }
 }
 else if (child_pid > 0){
-wait();
+wait(&status);
 return (0);
 }
 else{
 perror("Error Creating process:");
 exit (1);
 }
-
 }
