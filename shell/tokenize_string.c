@@ -18,6 +18,5 @@ char **tokenize_string(char *str, char **token, int *len)
   *len = (w_count + 1);
   
   /*free memory */
-  
   return (token);
 }
