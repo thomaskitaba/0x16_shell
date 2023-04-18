@@ -10,10 +10,23 @@
 int _execve(char **av, char **env)
 {
 /*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
-if (execve(av[0], av, env) == -1)
+pid_t parent_id, child_pid;
+child_pid = fork();
+
+if (child_pid == 0)
 {
+if (execve(av[0], av, env) == -1){
     perror("Error:");
     exit(1);
 }
+}
+elseif (child_pid > 0){
+wait();
 return (0);
+}
+else{
+perror("Error Creating process:");
+exit (1);
+}
+
 }
