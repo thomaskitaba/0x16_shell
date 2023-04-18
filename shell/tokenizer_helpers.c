@@ -71,7 +71,7 @@ if (need_correction == 1)
     path_buffer[i] = path_arg[k];
   }
   path_buffer[i] = '\0';
-  return (buffer);
+  return (path_buffer);
 }
 if (need_correction == 0)
 {
@@ -117,7 +117,7 @@ if (buffer){
 }
 while(word && w_count <= WORD_COUNT)
 {
-  if (word_count == 0 && buffer){
+  if (w_count == 0 && buffer){
     strcpy(token[w_count], buffer);
   }
   else{
