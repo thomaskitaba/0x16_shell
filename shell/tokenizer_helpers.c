@@ -117,12 +117,12 @@ if (buffer){
 }
 while(word && w_count <= WORD_COUNT)
 {
-  if (w_count == 0 && buffer){
+  /*if (w_count == 0 && buffer){
     strcpy(token[w_count], buffer);
   }
-  else{
+  else*/
   strcpy(token[w_count], word);
-  }
+  
   w_count++;
   word = strtok(NULL, delim); 
 }
