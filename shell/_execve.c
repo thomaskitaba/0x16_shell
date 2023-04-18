@@ -9,7 +9,7 @@ int _execve(char **av, char **env)
 {
 /*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
 int status;
-pid_t parent_id, child_pid;
+pid_t child_pid;
 child_pid = fork();
 
 if (child_pid == 0)
@@ -21,10 +21,13 @@ if (execve(av[0], av, env) == -1){
 }
 else if (child_pid > 0){
 wait(&status);
-return (0);
+return (1);
 }
 else{
 perror("Error Creating process:");
 exit (1);
+/*TODO: update exit struct*/
+return (-1);
 }
+return (-1);
 }
