@@ -3,7 +3,7 @@
  * _execve - execve 
  * @av: 2D of CL arguments
  * @env: environment variable
- * Return: Always 0.
+ * Return: succes 1, failur -1.
  */
 int _execve(char **av, char **env)
 {
