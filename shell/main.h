@@ -12,7 +12,6 @@
 #include <fcntl.h>
 #include <errno.h>
 
-
 #define MAX_WORDS 100
 #define MAX_WORD_LENGTH 100
 #define WORD_SIZE 100
