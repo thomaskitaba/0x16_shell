@@ -96,7 +96,7 @@ if (path_len <= 5)
  */
 int _strtok(char *str, char *delim, char **token)
 {
-int i, w_count, total_w_len, ;
+int i, w_count, total_w_len ;
 char *word, *str_cpy, *buffer;
 
 buffer = (char *)malloc(sizeof(char) * WORD_SIZE);
