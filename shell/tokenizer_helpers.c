@@ -99,6 +99,8 @@ check_path { send word to check path if no path defined
 append path to ls and return 1  else return -1}
 */
 buffer = add_path(word, buffer);
+if (!buffer)
+  return (NULL);
 /*if path was corrected and added */
 
 while(word && w_count <= WORD_COUNT)
