@@ -1,5 +1,6 @@
 #include <stdio.h>
 #include <unistd.h>
+#include <stdlib.h>
 #include "main.h"
 /**
  * _execve - execve 
@@ -7,13 +8,16 @@
  * @env: environment variable
  * Return: Always 0.
  */
+
 int _execve(char **av, char **env)
 {
-/*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
-if (execve(av[0], av, env) == -1)
-{
-    perror("Error:");
-    exit(1);
-}
-return (0);
+if (!env)
+  env = NULL;
+    
+    if (execve(av[0], av, NULL) == -1)
+    {
+        perror("Error:");
+        exit(-1);
+    }
+    return (0);
 }

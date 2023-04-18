@@ -3,26 +3,47 @@
 #include <stdlib.h>
 #include "main.h"
 
+/*
+char *create_buffer(void)
+{
+        char *buf;
+buf = malloc(sizeof(char) * BUFFER_SIZE);
+if (!buf)
+        return (NULL);
+return (buf);
+}
+
+int _strcspn(char *buf, char c)
+{
+int i, n;
+if (!buf)
+return (0);
+for (i = 0, n = (int)strlen(buf) ; i < n; i++)
+{
+  if (buf[i] == c)
+  {
+    return (i);
+    break;
+  }
+}
+return (0);
+}
+*/
+
 int hsh(int argc, char **argv)
 {
-  int i, result, w_len;
+  int result;
   char *buffer;
+  char eof[1];
   ssize_t read;
   size_t len;
-  pid_t pid;
   buffer = create_buffer();
-/* create and allocate 2D array */
-char **av_token;
-av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
-for (i = 0; i < MAX_WORDS; i++)
-{
-av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
-}
 /*if ac == 1 && av[0] = "./hsh"
 this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {
   printf("interactive mode\n");
+  
   do{
   putchar('$');
   
@@ -46,13 +67,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   if (read > 0)
   {
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
-  w_len = 0;
-  av_token = tokenize_string(buffer, av_token, &w_len);
-  printf("inside hsh function returned from tokenize_string:\t");
-  _print_2d(av_token, w_len);
-  _execve(av_token, NULL);
-  /*send tokenized 2D array to execve()*/
-  /*fork here*/
+  tokenize_string(buffer);
   }
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
@@ -62,9 +77,10 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 else
 {
   printf("command line mode\n");
+  
 /*tokenize the argv arguments */
 /*send them to execve*/
 }
-_free_2D(av_token, w_len);
+  
 return (0);
 }

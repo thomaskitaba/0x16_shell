@@ -22,6 +22,7 @@ for (i = 1, k = 0; i < argc; i++)
 av[argc-1] = NULL;
 return (0);
 }
+
 /**
  * _strtok - string to words
  * @str: string
@@ -46,11 +47,6 @@ while(word && w_count <= WORD_COUNT)
   word = strtok(NULL, delim); 
 }
 /*add NULL at the end of token*/
-token[w_count] = NULL;
-/*TODO: add token to info_t->argc   and info_t->argv*/
-/*TODO*/
-/*TODO*/
-/*TODO*/
-
+free(str_cpy);
 return (w_count);
 }

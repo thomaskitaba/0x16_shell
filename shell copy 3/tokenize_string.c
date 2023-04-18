@@ -1,0 +1,22 @@
+#include "main.h"
+/**
+ * tokenize_string - change string to 2D array
+ * @str: string to be tokenized
+ * Return: 1 on success, -1 on failur
+ */
+char **tokenize_string(char *str, char **token, int *len)
+{
+  /*char str[] = "thomas kitaba feyissa";*/
+  char *delimeter = " ";
+  int i, w_count;
+  w_count = 0;
+  /*malloc for 2d array **token  row*/
+  w_count = _strtok(str, delimeter, token);
+  printf("inside tokenize_string fun:\t");
+  _print_2d(token, w_count + 1);
+  *len = (w_count + 1);
+  printf("end of tokenize_string fun:\n");
+  /*free memory */
+  
+  return (token);
+}
