@@ -17,6 +17,6 @@ char **tokenize_string(char *str, char **token, int *len)
   *len = (w_count + 1);
   printf("end of tokenize_string fun:\n");
   /*free memory */
-  
+  printf("\n");
   return (token);
 }
