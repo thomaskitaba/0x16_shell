@@ -10,13 +10,16 @@ int hsh(int argc, char **argv)
   ssize_t read;
   size_t len;
   pid_t pid;
-  buffer = create_buffer();
+  /*buffer = create_buffer();*/
+  buffer = malloc(sizeof(char) * BUFFER_SIZE);
+if (!buf)
+        return (-1);
 /* create and allocate 2D array */
 char **av_token;
-av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
+av_token = (char **)malloc(sizeof(char *) * 2 * MAX_WORDS);
 for (i = 0; i < MAX_WORDS; i++)
 {
-av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
+av_token[i] = (char *)malloc(sizeof(char) * WORD_SIZE + 1);
 }
 /*if ac == 1 && av[0] = "./hsh"
 this means it is interactive mode do the loop*/
@@ -27,10 +30,6 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   putchar('$');
   
   read = getline(&buffer, &len, stdin);
-  
-  /*TODO: we have to remove the new line from buffer*/
-  buffer[_strcspn(buffer, '\n')] = '\0';
-  result = strcmp(buffer,  "exit");
   if (read == -1)
   {
     /*add error to error log*/
@@ -38,6 +37,10 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 	  free(buffer);
 	  exit(1);
   }
+  /*TODO: we have to remove the new line from buffer*/
+  buffer[_strcspn(buffer, '\n')] = '\0';
+  result = strcmp(buffer,  "exit");
+  
   if (result == 0)
   {
 	  /*handle ERROR*/
