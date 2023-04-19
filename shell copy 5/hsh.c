@@ -11,6 +11,7 @@ int hsh(int argc, char **argv)
   size_t len;
   pid_t pid;
   buffer = create_buffer();
+  memset(buffer, '\0', BUFFER_SIZE);
 /* create and allocate 2D array */
 char **av_token;
 av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
@@ -29,6 +30,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   read = getline(&buffer, &len, stdin);
   
   /*TODO: we have to remove the new line from buffer*/
+  
   buffer[_strcspn(buffer, '\n')] = '\0';
   result = strcmp(buffer,  "exit");
   if (read == -1)

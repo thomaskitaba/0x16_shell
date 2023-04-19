@@ -69,7 +69,7 @@ return (0);
 char* add_path(char *path_arg, char *path_buffer)
 {
   char *default_path;
-  int i, path_len, default_len, buffer_len, new_len;
+  int i, k, path_len, default_len, buffer_len, new_len, need_correction;
   
   new_len = path_len + buffer_len;
   default_path = "/bin/";
@@ -78,16 +78,15 @@ char* add_path(char *path_arg, char *path_buffer)
   need_correction = 0;
 
 /*check if /bin/ exitst in path_arg*/
-
-/*for (i = 0; i < default_len; i++)
+for (i = 0; i < default_len; i++)
 {
   if (default_path[i] != path_arg[i])
   {
     need_correction = 1;
     break;
   }
-}*/
-if (_strcmp(default_path, path_arg) != 0)
+}
+if (need_correction == 1)
 {
   
   /*strcpy(path_buffer, default_path);*/
@@ -105,7 +104,7 @@ if (_strcmp(default_path, path_arg) != 0)
   path_buffer[i] = '\0';
   return (path_buffer);*/
 }
-if (_strcmp(default_path, path_arg) == 0)
+if (need_correction == 0)
 {
   
 if (path_len <= 5)
