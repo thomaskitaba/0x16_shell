@@ -22,7 +22,7 @@ av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
 this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {
-  buffer = create_buffer();
+  buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
   
   printf("interactive mode\n");
   do{
@@ -56,6 +56,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   /*send tokenized 2D array to execve()*/
   /*fork here*/
   }
+  free(buffer);
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
 /*else if more than one argument
