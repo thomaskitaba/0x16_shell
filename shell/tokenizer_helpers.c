@@ -141,7 +141,7 @@ append path to ls and return 1  else return -1}
 buffer = add_path(word, buffer);
 if (!buffer)
 {
-  free(buffer);
+  
   printf("it is a directory");
   return (-1);
 }

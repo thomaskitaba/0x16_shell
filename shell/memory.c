@@ -18,7 +18,7 @@ free(token);
  */
 char *create_buffer(void)
 {
-        char *buf;
+char *buf;
 buf = malloc(sizeof(char) * BUFFER_SIZE);
 if (!buf)
         return (NULL);
