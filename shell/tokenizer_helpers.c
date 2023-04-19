@@ -61,8 +61,7 @@ for (i = 1, k = 0; i < argc; i++)
 av[argc-1] = NULL;
 return (0);
 }
-/**
- * add_path: add path to cmd if not provided
+/* add_path: add path to cmd if not provided
  * @path_arg: path argument at index 0
  * @Return: append path return1,  path not appended, -1 
  */
@@ -88,11 +87,8 @@ for (i = 0; i < default_len; i++)
 }
 if (need_correction == 1)
 {
-  /*strcpy(path_buffer, default_path);*/
-  path_buffer[0] = '\0';
-  /*_strcat(path_buffer, default_path);
-  if ((_strlen(path_buffer) + path_len) < WORD_SIZE);
-    _strcat(path_buffer, path_arg);*/
+  /*append /bin/ and ls*/
+  strcpy(path_buffer, default_path);
   k = 0;
   for (i = default_len; i < default_len + path_len; i++)
   {
@@ -107,6 +103,7 @@ if (need_correction == 0)
   
 if (path_len <= 5)
   {
+    printf("it is a directory");
     return (NULL);
   }
   else
@@ -139,12 +136,6 @@ check_path { send word to check path if no path defined
 append path to ls and return 1  else return -1}
 */
 buffer = add_path(word, buffer);
-if (!buffer)
-{
-  
-  printf("it is a directory");
-  return (-1);
-}
 /*if path was corrected and added */
 
 while(word && w_count <= WORD_COUNT)
