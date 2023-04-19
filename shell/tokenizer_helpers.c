@@ -100,7 +100,7 @@ if (need_correction == 1)
     k++;
   }
   path_buffer[i] = '\0';
-  return (path_buffer);*/
+  return (path_buffer);
 }
 if (need_correction == 0)
 {
