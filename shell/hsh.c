@@ -10,7 +10,7 @@ int hsh(int argc, char **argv)
   ssize_t read;
   size_t len;
   pid_t pid;
-  buffer = create_buffer();
+  
 /* create and allocate 2D array */
 char **av_token;
 av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
@@ -22,6 +22,8 @@ av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
 this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {
+  buffer = create_buffer();
+  
   printf("interactive mode\n");
   do{
   putchar('$');
@@ -48,9 +50,9 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   printf("%s\n", buffer); /*call convert buffer to 2d array*/
   w_len = 0;
   av_token = tokenize_string(buffer, av_token, &w_len);
-  printf("inside hsh function returned from tokenize_string:\t");
   _print_2d(av_token, w_len);
   _execve(av_token, NULL);
+  printf("\n");
   /*send tokenized 2D array to execve()*/
   /*fork here*/
   }
