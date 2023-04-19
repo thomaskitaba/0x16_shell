@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * _get_word_count - length of string
  * @str: string
@@ -26,13 +25,10 @@ int _strlen(char *str)
 {
   int i;
   i = 0;
-  while(str[i] != '\0')
-  {
-    i++;
-  }
+  while(str[i] != '\0') {
+    i++;   }
 return (i);
 }
-
 /**
 * _strcspn - find \\n and replace it with \0 
 *@c: char to be searched
