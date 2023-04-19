@@ -12,7 +12,7 @@ int hsh(int argc, char **argv)
   pid_t pid;
   /*buffer = create_buffer();*/
   buffer = malloc(sizeof(char) * BUFFER_SIZE);
-if (!buf)
+if (!buffer)
         return (-1);
 /* create and allocate 2D array */
 char **av_token;
