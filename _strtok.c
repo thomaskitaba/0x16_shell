@@ -105,8 +105,9 @@ for (i = 0; i < WORD_SIZE; i++)
   token[i] = (char *)malloc(sizeof(char) * WORD_SIZE);
 }
   w_count = _strtok(str, delimeter, token);
-  _print_2d(token, w_count + 1);
+  /*_print_2d(token, w_count + 1);*/
   /*free memory */
+  
   _free_2D(token, w_count);
   return (0);
 }
