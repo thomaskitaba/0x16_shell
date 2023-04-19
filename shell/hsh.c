@@ -78,7 +78,7 @@ else
     }
   }
   /*add NULL to argv*/
-  strcat(argv, NULL);
+  
   _execve(av, NULL);
 /*tokenize the argv arguments */
 /*send them to execve*/
