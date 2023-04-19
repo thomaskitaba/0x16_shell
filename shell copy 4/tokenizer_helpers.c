@@ -130,9 +130,6 @@ int _strtok(char *str, char *delim, char **token)
 int i, w_count, total_w_len ;
 char *word, *str_cpy, *buffer;
 
-if (!str)
-return (-1);
-
 buffer = (char *)malloc(sizeof(char) * WORD_SIZE);
 
 w_count = 0;
@@ -169,6 +166,6 @@ token[w_count] = NULL;
 /*TODO: add token to info_t->argc   and info_t->argv*/
 /*TODO*/
 
-
+free(buffer);
 return (w_count);
 }
