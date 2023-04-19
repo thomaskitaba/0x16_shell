@@ -22,6 +22,7 @@ int _putchar(char c);
 int _execve(char **av, char **env);
 int _strtok(char *str, char *delim, char **token);
 int _strlen(char *str);
+char *_strcat(char *dest, char *src);
 void _free_2D(char **token, int rows);
 char *create_buffer(void);
 int _get_word_count(char *str, char *delim);

@@ -49,16 +49,20 @@ for (i = 0; i < default_len; i++)
 }
 if (need_correction == 1)
 {
-  /*append /bin/ and ls*/
-  strcpy(path_buffer, default_path);
-  k = 0;
+  
+  /*strcpy(path_buffer, default_path);*/
+  path_buffer[0] = '\0';
+  
+  _strcat(path_buffer, default_path);
+  _strcat(path_buffer, path_arg);
+  /*k = 0;
   for (i = default_len; i < default_len + path_len; i++)
   {
     path_buffer[i] = path_arg[k];
     k++;
   }
   path_buffer[i] = '\0';
-  return (path_buffer);
+  return (path_buffer);*/
 }
 if (need_correction == 0)
 {
