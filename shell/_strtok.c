@@ -1,9 +1,9 @@
-#include "mian.h"
-
+#include "main.h"
 /**
  * _strtok - string to words
  * @str: string
  * @delim: delimeter
+ * @token: 2D ponter 2 hold tokenized cmd
  * Return: int 
  */
 int _strtok(char *str, char *delim, char **token)
