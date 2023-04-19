@@ -38,7 +38,6 @@ if (path_len <= 5) {
   }
   else {
     strcpy(path_buffer, path_arg);
-    return (path_buffer);
-  }
+    return (path_buffer); }
 }
 }
