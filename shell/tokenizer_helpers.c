@@ -75,7 +75,7 @@ char* add_path(char *path_arg, char *path_buffer)
   default_path = "/bin/";
   default_len = _strlen(default_path);
   path_len = _strlen(path_arg);
-  need_correction = 0;
+  
 
 /*check if /bin/ exitst in path_arg*/
 
