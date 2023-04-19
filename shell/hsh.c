@@ -53,7 +53,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   av_token = tokenize_string(buffer, av_token, &w_len);
   /*_print_2d(av_token, w_len);*/
   _execve(av_token, NULL);
-  _putchar('\n');
+  /*_putchar('\n');*/
   /*send tokenized 2D array to execve()*/
   /*fork here*/
   }
@@ -79,6 +79,7 @@ else
   }
   /*add NULL to argv*/
   _execve(av, NULL);
+/*TODO: add error check for execve*/
 /*tokenize the argv arguments */
 /*send them to execve*/
 }
