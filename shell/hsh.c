@@ -52,6 +52,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   _print_2d(av_token, w_len);
   /*if (av_token || read != -1 )*/
   _execve(av_token, NULL);
+  }
   else
   printf("path not found");
   printf("\n");
