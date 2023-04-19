@@ -17,7 +17,6 @@ char **tokenize_string(char *str, char **token, int *len)
   _print_2d(token, w_count + 1);
   
   *len = (w_count + 1);
-  
   /*free memory */
   return (token);
 }

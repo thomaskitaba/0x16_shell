@@ -10,6 +10,7 @@ int hsh(int argc, char **argv)
   ssize_t read;
   size_t len;
   pid_t pid;
+  char **av;
   
 /* create and allocate 2D array */
 char **av_token;
@@ -65,9 +66,24 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 else
 {
   printf("command line mode\n");
+  av = (char**)malloc(sizeof(char *) * (argc + 1));
+  for (i = 0; i < argc + 1; i++)
+  {
+    av[i] = (char *)malloc(sizeof(char) * _strlen(av[i] + 1));
+    strcpy(av[i], argv[i]);
+    if (i + 1 == argc)
+    {
+      av[i + 1] = NULL;
+      break;
+    }
+  }
+  /*add NULL to argv*/
+  strcat(argv, NULL);
+  _execve(av, NULL);
 /*tokenize the argv arguments */
 /*send them to execve*/
 }
+_free_2D(av, argc + 1);
 _free_2D(av_token, w_len);
 return (0);
 }
