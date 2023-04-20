@@ -26,6 +26,7 @@ return (buf);
 }
 char *create_2D_buffer(char **av)
 {
+  int i;
   av = (char **)malloc(sizeof(char *) * MAX_WORDS);
   if (!av) {
     return (NULL);

@@ -24,7 +24,6 @@ this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {
   
-  
   printf("interactive mode\n");
   do{
     buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
