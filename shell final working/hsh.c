@@ -23,11 +23,11 @@ av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
 this means it is interactive mode do the loop*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {
-  buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
   
   printf("interactive mode\n");
   do{
-  putchar('$');
+buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE); 
+	  putchar('$');
   
   read = getline(&buffer, &len, stdin);
   
