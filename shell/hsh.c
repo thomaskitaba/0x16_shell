@@ -48,12 +48,12 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   }
   if (read > 0)
   {
-  printf("%s\n", buffer); /*call convert buffer to 2d array*/
+  /*printf("%s\n", buffer); call convert buffer to 2d array*/
   w_len = 0;
   av_token = tokenize_string(buffer, av_token, &w_len);
   /*_print_2d(av_token, w_len);*/
   _execve(av_token, NULL);
-  printf("\n");
+  /*_putchar('\n');*/
   /*send tokenized 2D array to execve()*/
   /*fork here*/
   }
@@ -65,7 +65,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   tokenize_cmd (av, ar, av)*/
 else
 {
-  printf("command line mode\n");
+  /*printf("command line mode\n");*/
   av = (char**)malloc(sizeof(char *) * (argc + 1));
   for (i = 0; i < argc + 1; i++)
   {
@@ -79,6 +79,7 @@ else
   }
   /*add NULL to argv*/
   _execve(av, NULL);
+/*TODO: add error check for execve*/
 /*tokenize the argv arguments */
 /*send them to execve*/
 }
