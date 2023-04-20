@@ -24,3 +24,17 @@ if (!buf)
         return (NULL);
 return (buf);
 }
+char **create_2D_buffer(char **av)
+{
+  int i;
+  av = (char **)malloc(sizeof(char *) * MAX_WORDS);
+  if (!av) {
+    return (NULL);
+  }
+for (i = 0; i < MAX_WORDS; i++) {
+av[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
+if (!av[i])
+return (NULL);
+}
+return (av);
+}

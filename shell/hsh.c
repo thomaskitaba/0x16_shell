@@ -27,7 +27,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   
   printf("interactive mode\n");
   do{
-    buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
+  buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
   putchar('$');
   
   read = getline(&buffer, &len, stdin);
@@ -57,9 +57,8 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
   /*_putchar('\n');*/
   /*send tokenized 2D array to execve()*/
   /*fork here*/
-  free(buffer);
   }
-  
+  free(buffer);
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
 /*else if more than one argument

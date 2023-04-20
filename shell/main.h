@@ -26,6 +26,7 @@ char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 void _free_2D(char **token, int rows);
 char *create_buffer(void);
+char **create_2D_buffer(char **av);
 int _get_word_count(char *str, char *delim);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
