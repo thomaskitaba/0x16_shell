@@ -13,14 +13,13 @@ struct stat st;
 
 pid_t child_pid;
 /* if path not found dont execute any thing*/
-/*if (stat(av[0], &st) == 0)*/
+if (stat(av[0], &st) == 0)
 child_pid = fork();
-/*else {
+else {
   perror("Path not found");
-  exit(1);*/
+  exit(1);
 }
-if (child_pid == 0)
-{
+if (child_pid == 0) {
 if (execve(av[0], av, env) == -1){
     perror("Error:");
     exit(1);
