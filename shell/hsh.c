@@ -11,11 +11,8 @@ int hsh(int argc, char **argv)
   
 /* create and allocate 2D array */
 char **av_token;
-av_token = create_2D_buffer(av_token);
-/*av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
-for (i = 0; i < MAX_WORDS; i++) {
-av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
-}*/
+/*av_token = create_2D_buffer(av_token);*/
+
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
   printf("interactive mode\n");
