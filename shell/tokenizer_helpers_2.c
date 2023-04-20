@@ -9,6 +9,7 @@ char* add_path(char *path_arg, char *path_buffer)
   char *default_path;
   int i, k, path_len, default_len, buffer_len, new_len, need_correction;
   
+  path_len = buff_len = 0;
   new_len = path_len + buffer_len;
   default_path = "/bin/";
   default_len = _strlen(default_path);

@@ -1,6 +1,4 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <unistd.h>
+#include "main.h"
 /**
  * _getenv - get value of env name
  * @name: name to look for 
@@ -20,11 +18,4 @@ char *_getenv(const char *name)
     }
   }
   return (NULL);
-}
-int main(int argc, char **argv) {
-  char *value;
-  char *name = {"OS"};
-  value = _getenv(name);
-  printf("%s\n", value);
-return (0);
 }

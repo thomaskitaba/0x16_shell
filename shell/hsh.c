@@ -2,7 +2,12 @@
 #include <string.h>
 #include <stdlib.h>
 #include "main.h"
-
+/**
+ * hsh - the shell part
+ * @argc: argument count
+ * @argv: argument vector
+ * Return: 0 or 1 
+ */
 int hsh(int argc, char **argv)
 {
   int i, result, w_len;
