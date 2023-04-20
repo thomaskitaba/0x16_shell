@@ -26,7 +26,6 @@ char *_strcat(char *dest, char *src);
 int _strcmp(char *s1, char *s2);
 void _free_2D(char **token, int rows);
 char *create_buffer(void);
-char **create_2D_buffer(char **av);
 int _get_word_count(char *str, char *delim);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
@@ -34,6 +33,6 @@ char **tokenize_string(char *str, char **token, int *len);
 int _tokenize(char **av, char **argv, int argc);
 int _strcspn(char *buf, char c);
 char * add_path(char *path_arg, char *path_buffer);
-void _print_2D(char **av, int argc);
+void _print_2d(char **av, int argc);
 
 #endif
