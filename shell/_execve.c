@@ -9,9 +9,16 @@ int _execve(char **av, char **env)
 {
 /*char *av_tem[] = {"/bin/ls", "-l", NULL};*/
 int status;
-pid_t child_pid;
-child_pid = fork();
+struct stat st;
 
+pid_t child_pid;
+/* if path not found dont execute any thing*/
+if (stat(av[0], &st) == 0)
+child_pid = fork();
+else {
+  perror("Path not found");
+  exit(1);
+}
 if (child_pid == 0)
 {
 if (execve(av[0], av, env) == -1){
