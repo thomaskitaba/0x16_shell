@@ -20,8 +20,8 @@
 /**
  * struct builtin - Struct op
  *
- * @b: The operator
- * @f: The function associated
+ * @string: The string
+ * @builtin_f: The function associated
  */
 typedef struct builtin
 {
