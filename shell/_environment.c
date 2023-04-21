@@ -24,7 +24,7 @@ char *_getenv(const char *name)
  * @: name to look for 
  * Return: number of env variables 
  */
-int *_printenv(char **env)
+int _printenv(char **env)
 {
   
   int i; 

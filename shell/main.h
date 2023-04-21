@@ -47,5 +47,6 @@ int _tokenize(char **av, char **argv, int argc);
 int _strcspn(char *buf, char c);
 char * add_path(char *path_arg, char *path_buffer);
 void _print_2D(char **av, int argc);
+int _printenv(char **env);
 
 #endif
