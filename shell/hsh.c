@@ -11,7 +11,7 @@ int hsh(int argc, char **argv)
   ssize_t read;
   size_t len;
   char **av;
-  
+
 /* create and allocate 2D array */
 /*char **av_token;
 av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
