@@ -12,8 +12,7 @@ int i, w_count, total_w_len ;
 char *word, *str_cpy, *buffer;
 
 buffer = (char *)malloc(sizeof(char) * WORD_SIZE);
-w_count = 0;
-total_w_len = 0;
+w_count = total_w_len = 0;
 str_cpy = strdup(str);
 
 word = strtok(str_cpy, delim);
