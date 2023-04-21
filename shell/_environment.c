@@ -19,3 +19,25 @@ char *_getenv(const char *name)
   }
   return (NULL);
 }
+/**
+ * _printenv - print current environment
+ * @: name to look for 
+ * Return: number of env variables 
+ */
+int *_printenv(char **env)
+{
+  
+  int i; 
+  i = 0;
+  if (!env)
+  {
+    return (-1);
+  }
+  while (env[i])
+  {
+    printf("%s\n", env[i]);
+    i++;
+  }
+return (i);
+}
+

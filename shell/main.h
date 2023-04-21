@@ -17,6 +17,17 @@
 #define WORD_SIZE 1024
 #define WORD_COUNT 100
 #define BUFFER_SIZE 1024
+/**
+ * struct builtin - Struct op
+ *
+ * @b: The operator
+ * @f: The function associated
+ */
+typedef struct builtin
+{
+char *string;
+int (*builtin_f)(char **);
+} built_in;
 
 int _putchar(char c);
 int _execve(char **av, char **env);

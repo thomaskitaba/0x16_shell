@@ -6,7 +6,7 @@
  */
   int shell_loop_hsh(int argc, char **argv)
   {
-    char *buffer; char **av_token;
+    char *buffer; char **av_token; extern char **env = environ;
     int i, result, w_len; ssize_t read; size_t len; 
   do{
   av_token = create_2D_buffer(av_token); 
@@ -25,15 +25,18 @@
     free(buffer);
 	  return (0);
   }
+  if (strcmp(buffer, "printenv") == 0)
+  _printenv(env);
   if (read > 0) {
   /*printf("%s\n", buffer); call convert buffer to 2d array*/
   w_len = 0;
+  /**TODO: add built in here */
   av_token = tokenize_string(buffer, av_token, &w_len);
   /*_print_2d(av_token, w_len);*/
   _execve(av_token, NULL);
   }
-  free(buffer);
-  _free_2D(av_token, w_len);
+  free(buffer); _free_2D(av_token, w_len);
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
-  
   }
+
+
