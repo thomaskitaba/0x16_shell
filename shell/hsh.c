@@ -19,7 +19,10 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   if (hsh_val == -1){
     perror("Error: ");
   }
-
+  if (hsh_val == 0)
+  {
+    return (0);
+  }
   
 }
 else
