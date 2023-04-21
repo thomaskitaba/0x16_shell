@@ -21,12 +21,12 @@
     /*add error to error log*/
     /* handle ERROR */
 	free(buffer);
-	return (-1)
+	return (-1);
   }
   if (result == 0) {
 	/*handle ERROR*/
     free(buffer);
-	return (0);
+	  return (0);
   }
   if (read > 0) {
   /*printf("%s\n", buffer); call convert buffer to 2d array*/

@@ -7,28 +7,21 @@
  */
 int hsh(int argc, char **argv)
 {
-  int hsh_val;
+  int i, hsh_val;
   ssize_t read;
   size_t len;
   char **av;
 
-/* create and allocate 2D array */
-/*char **av_token;
-av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
-for (i = 0; i < MAX_WORDS; i++)
-{
-av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
-}*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   
   printf("interactive mode\n");
    hsh_val = shell_loop_hsh(argc, argv);
-  if (hsh_val == -1)
+  if (hsh_val == -1){
+    perror("Error: ");
+  }
+
   
 }
-/*else if more than one argument
-  it means it is not interactive mode so just send 
-  tokenize_cmd (av, ar, av)*/
 else
 {
   /*printf("command line mode\n");*/
