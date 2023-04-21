@@ -18,7 +18,7 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   if (hsh_val == 0)
     return (0);
 }
-else {
+/*else {
   av = (char**)malloc(sizeof(char *) * (argc + 1));
   for (i = 0; i < argc + 1; i++)   {
     av[i] = (char *)malloc(sizeof(char) * _strlen(av[i] + 1));
@@ -29,8 +29,7 @@ else {
     }
   }
   _execve(av, NULL);
-/*TODO: add error check for execve*/
-}
+}*/
 _free_2D(av, argc + 1);
 return (0);
 }
