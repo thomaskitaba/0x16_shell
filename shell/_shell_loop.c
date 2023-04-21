@@ -5,36 +5,30 @@
  * @av_token: 2D array to stor input command
  * Return: on exit 0, error -1, success 1 
  */
-  int shell_loop_hsh(char **av_token)
+  int shell_loop_hsh(int argc, char **argv)
   {
-    char *buffer;
-    int i, result, w_len;
-    ssize_t read;
-    size_t len; 
+    char *buffer; char **av_token;
+    int i, result, w_len; ssize_t read; size_t len; 
   do{
+  av_token = create_2D_buffer(av_token); 
   buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
   putchar('$');
-  
   read = getline(&buffer, &len, stdin);
-  
   /*TODO: we have to remove the new line from buffer*/
   buffer[_strcspn(buffer, '\n')] = '\0';
   result = strcmp(buffer,  "exit");
-  if (read == -1)
-  {
+  if (read == -1) {
     /*add error to error log*/
     /* handle ERROR */
 	free(buffer);
 	return (-1)
   }
-  if (result == 0)
-  {
+  if (result == 0) {
 	/*handle ERROR*/
     free(buffer);
 	return (0);
   }
-  if (read > 0)
-  {
+  if (read > 0) {
   /*printf("%s\n", buffer); call convert buffer to 2d array*/
   w_len = 0;
   av_token = tokenize_string(buffer, av_token, &w_len);

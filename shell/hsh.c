@@ -13,16 +13,16 @@ int hsh(int argc, char **argv)
   char **av;
   
 /* create and allocate 2D array */
-char **av_token;
+/*char **av_token;
 av_token = (char **)malloc(sizeof(char *) * MAX_WORDS);
 for (i = 0; i < MAX_WORDS; i++)
 {
 av_token[i] = (char *)malloc(sizeof(char) * MAX_WORD_LENGTH);
-}
+}*/
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   
   printf("interactive mode\n");
-   hsh_val = shell_loop_hsh(av_token);
+   hsh_val = shell_loop_hsh(argc, argv);
   if (hsh_val == -1)
   
 }
