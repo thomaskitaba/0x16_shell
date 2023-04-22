@@ -18,6 +18,7 @@ child_pid = fork();
 else {
   printf("%s", av[0]);
   perror("Error");
+  exit(-1);
   return (-1);
 }
 if (child_pid == 0) {
