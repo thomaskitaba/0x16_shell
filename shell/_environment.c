@@ -15,7 +15,7 @@ for (env = environ; *env != NULL; env++)
 {
 if (strncmp(name, *env, len) == 0 && (*env)[len] == '=')
 {
-return  &((*env)[len + 1]);
+return  (&((*env)[len + 1]));
 }
 }
 return (NULL);
@@ -33,7 +33,8 @@ i = 0;
 if (!env)
 {
 return (-1); }
-while (env[i]) { printf("%s\n", env[i]); i++;
+while (env[i]) 
+{ printf("%s\n", env[i]); i++;
 }
 return (i);
 }
