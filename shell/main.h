@@ -17,6 +17,7 @@
 #define WORD_SIZE 1024
 #define WORD_COUNT 100
 #define BUFFER_SIZE 1024
+extern char **environ;
 /**
  * struct builtin - Struct op
  *
