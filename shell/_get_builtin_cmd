@@ -7,7 +7,7 @@
 int (*get_builtin_cmd(char *s))(char **)
 {
 built_in b_in[] = {
-{"Exit", _Exit},
+{"Exit", _exit_shell},
 {"printenv", _printenv},
 {NULL, NULL}
 };
