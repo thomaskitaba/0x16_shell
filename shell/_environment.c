@@ -6,16 +6,14 @@
  */
 char *_getenv(const char *name)
 {
-  extern char **environ;
-  char **env;
-  int len;
-  len = strlen(name);
-  for (env = environ; *env != NULL; env++) {
-    if (strncmp(name, *env, len) == 0 && (*env)[len] == '=') {
-      return  &((*env)[len + 1]);
-    }
-  }
-  return (NULL);
+extern char **environ; char **env; int len;
+len = _strlen(name);
+
+for (env = environ; *env != NULL; env++) {
+if (strncmp(name, *env, len) == 0 && (*env)[len] == '=') {
+return  &((*env)[len + 1]); }
+}
+return (NULL);
 }
 /**
  * _printenv - print current environment
@@ -24,25 +22,19 @@ char *_getenv(const char *name)
  */
 int _printenv(char **env)
 {  
-  int i; 
-  i = 0;
-  if (!env) {
-    return (-1);
-  }
-  while (env[i]) {
-    printf("%s\n", env[i]);
-    i++;
-  }
+int i;
+
+i = 0;
+if (!env) {
+return (-1); }
+while (env[i]) {
+printf("%s\n", env[i]); i++; }
 return (i);
 }
 /**
- * _exit - exits the shell
+ * _exit_shell - exits the shell
  * @string: string passed
  * Return: successful exit 0, else -1
  */
-int _exit_shell(char **string)
-{
-  /*TODO: save variables if neccessory*/
-  int result = 0;
-  return (result);
-}
+int _exit_shell(char **string) {
+int result = 0; return (result); }
