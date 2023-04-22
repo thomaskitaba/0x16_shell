@@ -49,6 +49,6 @@ int _exit_shell(char **string)
 {
   /*TODO: save variables if neccessory*/
   int result = 0;
-
+  printf("exited using builtin function");
   return (result);
 }

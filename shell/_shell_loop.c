@@ -15,10 +15,10 @@
   read = getline(&buffer, &len, stdin);
   /*TODO: we have to remove the new line from buffer*/
   buffer[_strcspn(buffer, '\n')] = '\0';
-  /*result = strcmp(buffer,  "exit");*/
+  result = strcmp(buffer,  "exit");
   if (strcmp(buffer, "printenv") == 0)
   _printenv(environ);
-  if (strcmp(buffer, "exit") == 0) {
+  if (result == 0) {
     result = _exit_shell(environ);
     /*b_string = create_2D_buffer(b_string);
     token(b_string, buffer);
