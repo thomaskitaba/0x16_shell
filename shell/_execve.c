@@ -17,6 +17,7 @@ if (stat(av[0], &st) == 0)
 child_pid = fork();
 else {
   perror(av[0]);
+  _putchar('\n');
   return (-1);
 }
 if (child_pid == 0) {
