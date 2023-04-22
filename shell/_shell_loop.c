@@ -11,7 +11,7 @@
   do{
   av_token = create_2D_buffer(av_token); 
   buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
-  if (strcmp(shell == "./hsh") == 0)
+  if (strcmp(shell, "./hsh") == 0)
   putchar('$');
   read = getline(&buffer, &len, stdin);
   /*TODO: we have to remove the new line from buffer*/
