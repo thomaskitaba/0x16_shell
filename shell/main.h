@@ -40,6 +40,7 @@ void _free_2D(char **token, int rows);
 char *create_buffer(void);
 char **create_2D_buffer(char **av);
 int _get_word_count(char *str, char *delim);
+int (*get_builtin_cmd(char *s))(char **);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
 char **tokenize_string(char *str, char **token, int *len);
