@@ -11,7 +11,7 @@
   do{
   av_token = create_2D_buffer(av_token); 
   buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
-  if (mode == 1)
+  if (mode == 0)
   putchar('$');
   read = getline(&buffer, &len, stdin);
   /*TODO: we have to remove the new line from buffer*/
@@ -40,7 +40,7 @@
   _execve(av_token, NULL);
   }
   free(buffer); _free_2D(av_token, w_len);
-  if (mode == 0)
+  if (mode == 1)
     result = 0;
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
   }
