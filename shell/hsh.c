@@ -18,6 +18,9 @@ if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   if (hsh_val == 0)
     return (0);
 }
+else{
+  exit(1);
+}
 /*else {
   av = (char**)malloc(sizeof(char *) * (argc + 1));
   for (i = 0; i < argc + 1; i++)   {
