@@ -6,7 +6,7 @@
  */
   int shell_loop_hsh(int argc, char **argv)
   {
-    char *buffer; char **av_token; char **b_string; extern char **environ;
+    char *buffer; char **av_token; extern char **environ;
     int i, result, w_len; ssize_t read; size_t len; 
   do{
   av_token = create_2D_buffer(av_token); 
@@ -20,7 +20,7 @@
   if (strcmp(buffer, "printenv") == 0)
   _printenv(environ);
   if (result == 0) {
-    result = _exit_shell(environ);
+    _exit_shell(environ);
   }
   if (read == -1) {
   	free(buffer);
