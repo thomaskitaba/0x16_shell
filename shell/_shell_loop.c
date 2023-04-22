@@ -20,9 +20,6 @@
   _printenv(environ);
   if (result == 0) {
     result = _exit_shell(environ);
-    /*b_string = create_2D_buffer(b_string);
-    token(b_string, buffer);
-    result = _exit_shell(b_string);*/
   }
   if (read == -1) {
   	free(buffer);

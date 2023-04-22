@@ -10,10 +10,8 @@ char *_getenv(const char *name)
   char **env;
   int len;
   len = strlen(name);
-  for (env = environ; *env != NULL; env++)
-  {
-    if (strncmp(name, *env, len) == 0 && (*env)[len] == '=')
-    {
+  for (env = environ; *env != NULL; env++) {
+    if (strncmp(name, *env, len) == 0 && (*env)[len] == '=') {
       return  &((*env)[len + 1]);
     }
   }
@@ -25,16 +23,13 @@ char *_getenv(const char *name)
  * Return: number of env variables 
  */
 int _printenv(char **env)
-{
-  
+{  
   int i; 
   i = 0;
-  if (!env)
-  {
+  if (!env) {
     return (-1);
   }
-  while (env[i])
-  {
+  while (env[i]) {
     printf("%s\n", env[i]);
     i++;
   }
@@ -49,6 +44,5 @@ int _exit_shell(char **string)
 {
   /*TODO: save variables if neccessory*/
   int result = 0;
-  printf("exited using builtin function");
   return (result);
 }
