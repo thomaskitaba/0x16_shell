@@ -35,7 +35,8 @@ if (!env)
 return (-1); }
 while (env[i])
 {
-  printf("%s\n", env[i]); i++;
+printf("%s\n", env[i]);
+i++;
 }
 return (i);
 }
