@@ -1,4 +1,5 @@
 #include "main.h"
+
 /**
  * _getenv - get value of env name
  * @name: name to look for
@@ -6,7 +7,6 @@
  */
 char *_getenv(const char *name)
 {
-extern char **environ;
 char **env;
 int len;
 len = strlen(name);
