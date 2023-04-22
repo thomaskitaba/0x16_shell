@@ -1,13 +1,16 @@
 #include "main.h"
 /**
  * shell_loop_hsh - loop and accept command input
- * @av_token: 2D array to stor input command
+ * @argc: 2D array to stor input command
+ * @argv: argument vector
+ * @mode: open mode
  * Return: on exit 0, error -1, success 1
  */
 int shell_loop_hsh(int argc, char **argv, int mode)
 {
-char *buffer; char **av_token; extern char **environ;
-int i, result, w_len; ssize_t read; size_t len;
+char *buffer; char **av_token;
+int i, result, w_len;
+ssize_t read; size_t len;
 do{
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
@@ -38,5 +41,3 @@ if (mode == 0)
 exit(1);
 }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
-
-
