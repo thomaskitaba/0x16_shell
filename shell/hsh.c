@@ -13,8 +13,8 @@ int hsh(int argc, char **argv)
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   printf("interactive mode\n");
   hsh_val = shell_loop_hsh(argc, argv);
-  if (hsh_val == -1)
-    perror("Error insid hsh: ");
+  /*if (hsh_val == -1)
+    perror("Error insid hsh: ");*/
   if (hsh_val == 0)
     return (0);
 }
