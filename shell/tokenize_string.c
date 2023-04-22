@@ -28,6 +28,6 @@ char **tokenize_string(char *str, char **token, int *len)
 int token(char **av, char *string)
 {
   strcpy(av[0], string);
-  _free_2D(av);
+  _free_2D(av, WORD_SIZE);
   return (1);
 }
