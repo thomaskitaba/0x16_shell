@@ -27,8 +27,6 @@ char **tokenize_string(char *str, char **token, int *len)
  */
 int **2_2d_string(char **2d_string, char *string)
 {
-  char **2d_string;
-
   strcpy(2d_string[0], string);
   _free_2D(2d_string);
   return (1);
