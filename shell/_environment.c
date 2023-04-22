@@ -22,7 +22,7 @@ return (NULL);
 }
 /**
  * _printenv - print current environment
- * @: name to look for
+ * @env: name to look for
  * Return: number of env variables
  */
 int _printenv(char **env)
