@@ -8,9 +8,11 @@
  */
 int shell_loop_hsh(int argc, char **argv, int mode)
 {
-char *buffer; char **av_token;
+char *buffer;
+char **av_token;
 int i, result, w_len;
-ssize_t read; size_t len;
+ssize_t read;
+size_t len;
 do{
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
@@ -25,11 +27,13 @@ _printenv(environ);
 if (result == 0) {
 _exit_shell(environ);
 }
-if (read == -1 || result = 0) {
+if (read == -1 || result = 0)
+{
 free(buffer);
 return (-1);
 }
-if (read > 0) {
+if (read > 0)
+{
 w_len = 0;
 /**TODO: add built in here */
 av_token = tokenize_string(buffer, av_token, &w_len);
