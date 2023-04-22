@@ -4,7 +4,7 @@
  * @s: string command
  * Return: integer 
  */
-int (*get_builtin_cmd(char *s))(char **);
+int (*get_builtin_cmd(char *s))(char **)
 {
 built_in b_in[] = {
 {"Exit", _exit_shell},
