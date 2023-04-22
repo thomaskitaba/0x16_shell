@@ -28,7 +28,7 @@ if (result == 0)
 {
 _exit_shell(environ);
 }
-if (read == -1 || result = 0)
+if (read == -1 || result == 0)
 {
 free(buffer);
 return (-1);
@@ -41,7 +41,8 @@ av_token = tokenize_string(buffer, av_token, &w_len);
 /*_print_2d(av_token, w_len);*/
 _execve(av_token, NULL);
 }
-free(buffer); _free_2D(av_token, w_len);
+free(buffer);
+_free_2D(av_token, w_len);
 if (mode == 0)
 exit(1);
 } while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
