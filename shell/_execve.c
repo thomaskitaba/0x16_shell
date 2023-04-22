@@ -15,11 +15,13 @@ pid_t child_pid;
 /* if path not found dont execute any thing*/
 if (stat(av[0], &st) == 0)
 child_pid = fork();
-else {
+else
+{
 perror(av[0]);
 return (-1);
 }
-if (child_pid == 0) {
+if (child_pid == 0)
+{
 if (execve(av[0], av, env) == -1)
 {
 perror("Error insid execve:");
@@ -31,7 +33,8 @@ else if (child_pid > 0)
 wait(&status);
 return (1);
 }
-else{
+else
+{
 return (-1);
 /*TODO: update exit struct*/
 return (-1);
