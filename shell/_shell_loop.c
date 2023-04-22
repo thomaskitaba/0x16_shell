@@ -15,7 +15,11 @@
   read = getline(&buffer, &len, stdin);
   /*TODO: we have to remove the new line from buffer*/
   buffer[_strcspn(buffer, '\n')] = '\0';
-  result = strcmp(buffer,  "exit");
+  /*result = strcmp(buffer,  "exit");*/
+  if (strcmp(buffer, "printenv") == 0)
+  _printenv(environ);
+  if (strcmp(buffer, "exit") == 0)
+  result = _exit(2_2D_string(buffer));
   if (read == -1) {
   	free(buffer);
 	  return (-1);
@@ -25,8 +29,7 @@
     free(buffer);
 	  return (0);
   }
-  if (strcmp(buffer, "printenv") == 0)
-  _printenv(environ);
+  
   if (read > 0) {
   /*printf("%s\n", buffer); call convert buffer to 2d array*/
   w_len = 0;

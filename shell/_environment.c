@@ -40,4 +40,13 @@ int _printenv(char **env)
   }
 return (i);
 }
-
+/**
+ * _exit - exits the shell
+ * @string: string passed
+ * Return: successful exit 0, else -1
+ */
+int _exit(char **string)
+{
+  /*TODO: save variables if neccessory*/
+  return (0);
+}
