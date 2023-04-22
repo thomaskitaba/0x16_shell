@@ -16,7 +16,8 @@ pid_t child_pid;
 if (stat(av[0], &st) == 0)
 child_pid = fork();
 else {
-  perror("%s", av[0]);
+  printf("%s", av[0]);
+  perror("Error");
   return (-1);
 }
 if (child_pid == 0) {
