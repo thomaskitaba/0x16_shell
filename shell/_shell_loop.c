@@ -16,12 +16,12 @@
   /*TODO: we have to remove the new line from buffer*/
   buffer[_strcspn(buffer, '\n')] = '\0';
   result = strcmp(buffer,  "exit");
-  (*get_builtin_cmd(buffer))(environ);
-  /* if (strcmp(buffer, "printenv") == 0)
+  /*(*get_builtin_cmd(buffer))(environ);*/
+  if (strcmp(buffer, "printenv") == 0)
   _printenv(environ);
   if (result == 0) {
     result = _exit_shell(environ);
-  }*/
+  }
   if (read == -1) {
   	free(buffer);
 	  return (-1);
