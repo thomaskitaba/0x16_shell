@@ -6,10 +6,11 @@
  */
 char *_getenv(const char *name)
 {
+extern char **environ;
 char **env;
 int len;
+len = strlen(name);
 
-len = _strlen(name);
 for (env = environ; *env != NULL; env++) {
 if (strncmp(name, *env, len) == 0 && (*env)[len] == '=') {
 return  &((*env)[len + 1]); }
@@ -28,8 +29,7 @@ int i;
 i = 0;
 if (!env) {
 return (-1); }
-while (env[i]) {
-printf("%s\n", env[i]); i++; }
+while (env[i]) { printf("%s\n", env[i]); i++; }
 return (i);
 }
 /**
