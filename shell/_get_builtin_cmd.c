@@ -6,7 +6,7 @@
  */
 int (*get_builtin_cmd(char *s))(char **)
 {
-  extern char **environ
+
 built_in b_in[] = {
 {"Exit", _exit_shell},
 {"printenv", _printenv},
