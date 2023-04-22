@@ -30,7 +30,7 @@ wait(&status);
 return (1);
 }
 else{
-perror("Error:");
+
 return (-1);
 /*TODO: update exit struct*/
 return (-1); }
