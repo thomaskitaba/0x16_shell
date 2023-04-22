@@ -18,7 +18,6 @@ child_pid = fork();
 else {
   printf("%s", "thomas kitaba");
   perror("Error");
-  exit(-1);
   return (-1);
 }
 if (child_pid == 0) {
