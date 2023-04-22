@@ -40,7 +40,8 @@
   _execve(av_token, NULL);
   }
   free(buffer); _free_2D(av_token, w_len);
-  
+  if (mode == 0)
+  exit(1);
   }while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
   }
 
