@@ -21,7 +21,7 @@
   if (strcmp(buffer, "exit") == 0) {
     b_string = create_2D_buffer(b_string);
     token(b_string, buffer);
-    result = _exit_shell(token);
+    result = _exit_shell(b_string);
   }
   if (read == -1) {
   	free(buffer);
