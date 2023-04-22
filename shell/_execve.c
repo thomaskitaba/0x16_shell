@@ -16,13 +16,13 @@ pid_t child_pid;
 if (stat(av[0], &st) == 0)
 child_pid = fork();
 else {
-  perror("Path not found");
-  exit(1);
+  perror("%s", av[0]);
+  return (-1);
 }
 if (child_pid == 0) {
 if (execve(av[0], av, env) == -1){
     perror("Error:");
-    exit(1);
+    return (-1);
 }
 }
 else if (child_pid > 0){
@@ -30,8 +30,8 @@ wait(&status);
 return (1);
 }
 else{
-perror("Error Creating process:");
-exit (1);
+perror("Error:");
+return (-1);
 /*TODO: update exit struct*/
 return (-1);
 }
