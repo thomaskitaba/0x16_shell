@@ -20,5 +20,5 @@ while (b_in[i].string != NULL && *(b_in[i].string) != *s)
 i++;
 }
 b_in[i].builtin_f(environ);
-return (b_in[i].builtin_f);
+return (0);
 }
