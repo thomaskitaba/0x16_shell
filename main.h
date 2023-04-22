@@ -6,7 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 #include <sys/types.h>
-#include <sys/wait.h>
+
 #include <sys/stat.h>
 #include <limits.h>
 #include <fcntl.h>
@@ -23,11 +23,6 @@
  * @string: The string
  * @builtin_f: The function associated
  */
-typedef struct builtin
-{
-char *string;
-int (*builtin_f)(char **);
-} built_in;
 
 int _putchar(char c);
 int _execve(char **av, char **env);
