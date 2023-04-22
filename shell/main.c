@@ -6,14 +6,16 @@
  */
 int main(int argc, char **argv)
 {
-  int a; /*to accept returned value from hsh*/
+  int a, mode; /*to accept returned value from hsh*/
   /*initialize some variables here*/
   /*step 1: send string and recive 2d array*/
   /*step 2: send the 2d array to tokenzier
   */
-  if (strcmp(argv[0], "./hsh") == 0)
-  hsh(argc, argv, 1); /*interactive*/
-  else
-  hsh(argc, argv, 0); /*command line*/
+  if (argc == 1)
+  mode = 1; /*interactive*/
+  else 
+  mode = 0; /*interactive*/
+  hsh(argc, argv, mode); 
+
   return (0);
 }
