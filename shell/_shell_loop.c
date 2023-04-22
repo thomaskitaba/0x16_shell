@@ -13,7 +13,7 @@ char **av_token;
 int i, result, w_len;
 ssize_t read;
 size_t len;
-do{
+do {
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 putchar('$');
@@ -24,7 +24,8 @@ result = strcmp(buffer,  "exit");
 /*(*get_builtin_cmd(buffer))(environ);*/
 if (strcmp(buffer, "printenv") == 0)
 _printenv(environ);
-if (result == 0) {
+if (result == 0)
+{
 _exit_shell(environ);
 }
 if (read == -1 || result = 0)
@@ -43,5 +44,5 @@ _execve(av_token, NULL);
 free(buffer); _free_2D(av_token, w_len);
 if (mode == 0)
 exit(1);
-}while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
+} while (result != 0 && read != -1 && read > 1 && buffer[read - 1] != '\n');
 }
