@@ -5,14 +5,14 @@
  * @argv: argument vector
  * Return: 0 or 1 
  */
-int hsh(int argc, char **argv)
+int hsh(int argc, char **argv, int mode)
 {
   int i, hsh_val; ssize_t read;
   size_t len; char **av;
 
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0)) {
   printf("interactive mode\n");
-  hsh_val = shell_loop_hsh(argc, argv, "./hsh");
+  hsh_val = shell_loop_hsh(argc, argv, mode);
   /*if (hsh_val == -1)
     perror("Error insid hsh: ");*/
   if (hsh_val == 0)

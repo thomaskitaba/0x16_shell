@@ -31,7 +31,7 @@ int (*builtin_f)(char **);
 
 int _putchar(char c);
 int _execve(char **av, char **env);
-int shell_loop_hsh(int argc, char **argv, char *shell);
+int shell_loop_hsh(int argc, char **argv, int mode);
 int _strtok(char *str, char *delim, char **token);
 int _strlen(char *str);
 char *_strcat(char *dest, char *src);
@@ -42,7 +42,7 @@ char **create_2D_buffer(char **av);
 int _get_word_count(char *str, char *delim);
 int (*get_builtin_cmd(char *s))(char **);
 int _strcspn(char *buf, char c);
-int hsh(int argc, char **argv);
+int hsh(int argc, char **argv, int mode);
 char **tokenize_string(char *str, char **token, int *len);
 int token(char **av, char *string);
 int _exit_shell(char **string);
