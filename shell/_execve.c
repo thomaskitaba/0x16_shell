@@ -34,7 +34,6 @@ else{
 perror("Error:");
 return (-1);
 /*TODO: update exit struct*/
-return (-1);
-}
+return (-1); }
 return (-1);
 }
