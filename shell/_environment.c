@@ -45,8 +45,10 @@ return (i);
  * @string: string passed
  * Return: successful exit 0, else -1
  */
-int _exit(char **string)
+int _exit_shell(char **string)
 {
   /*TODO: save variables if neccessory*/
-  return (0);
+  int result = 0;
+
+  return (result);
 }

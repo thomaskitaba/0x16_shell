@@ -23,15 +23,13 @@ char **tokenize_string(char *str, char **token, int *len)
 /**
  * 2_2d_string - change word to 2d word
  * @string: string to be converted
- * Return: 2d string
+ * Return: 1 on success, -1 on faliur
  */
-char **2_2d_string(char *string)
+int **2_2d_string(char **2d_string, char *string)
 {
   char **2d_string;
 
-  2d_string = (char **)malloc(sizeof(char *) * 1);
-  2d_string[0] = (char *)malloc(sizeof(char) *  _strlen(string) + 1);
   strcpy(2d_string[0], string);
   _free_2D(2d_string);
-  return (2d_string);
+  return (1);
 }
