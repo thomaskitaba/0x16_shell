@@ -16,7 +16,7 @@
   /*TODO: we have to remove the new line from buffer*/
   buffer[_strcspn(buffer, '\n')] = '\0';
   result = strcmp(buffer,  "exit");
-  get_builtin_cmd(buffer)(environ);
+  get_builtin_cmd(buffer);
   /* if (strcmp(buffer, "printenv") == 0)
   _printenv(environ);
   if (result == 0) {
