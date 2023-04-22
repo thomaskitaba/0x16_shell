@@ -4,14 +4,14 @@
  * @av_token: 2D array to stor input command
  * Return: on exit 0, error -1, success 1 
  */
-  int shell_loop_hsh(int argc, char **argv)
+  int shell_loop_hsh(int argc, char **argv, char *shell)
   {
     char *buffer; char **av_token; extern char **environ;
     int i, result, w_len; ssize_t read; size_t len; 
   do{
   av_token = create_2D_buffer(av_token); 
   buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
-  if (argv[0] == "./hsh")
+  if (strcmp(shell == "./hsh") == 0)
   putchar('$');
   read = getline(&buffer, &len, stdin);
   /*TODO: we have to remove the new line from buffer*/
