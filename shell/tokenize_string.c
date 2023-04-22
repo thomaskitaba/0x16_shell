@@ -25,9 +25,9 @@ char **tokenize_string(char *str, char **token, int *len)
  * @string: string to be converted
  * Return: 1 on success, -1 on faliur
  */
-int 2_2d_string(char **2d_string, char *string)
+int token(char **av, char *string)
 {
-  strcpy(2d_string[0], string);
-  _free_2D(2d_string);
+  strcpy(av[0], string);
+  _free_2D(av);
   return (1);
 }

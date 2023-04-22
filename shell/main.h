@@ -43,7 +43,7 @@ int _get_word_count(char *str, char *delim);
 int _strcspn(char *buf, char c);
 int hsh(int argc, char **argv);
 char **tokenize_string(char *str, char **token, int *len);
-int 2_2d_string(char **2d_string, char *string);
+int token(char **av, char *string);
 int _exit_shell(char **string);
 int _tokenize(char **av, char **argv, int argc);
 int _strcspn(char *buf, char c);
