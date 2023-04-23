@@ -8,7 +8,7 @@
  */
 int _strtok(char *str, char *delim, char **token)
 {
-int i, w_count, total_w_len ;
+int i, w_count, total_w_len;
 char *word, *str_cpy, *buffer;
 
 buffer = (char *)malloc(sizeof(char) * WORD_SIZE);
@@ -18,7 +18,7 @@ str_cpy = strdup(str);
 word = strtok(str_cpy, delim);
 buffer = add_path(word, buffer);
 /*if path was corrected and added */
-while(word && w_count <= WORD_COUNT)
+while (word && w_count <= WORD_COUNT)
 {
 if (w_count == 0 && buffer)
 strcpy(token[w_count], buffer);
