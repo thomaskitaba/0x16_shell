@@ -15,7 +15,7 @@ while (token)
 word_count++;
 token = strtok(NULL, delim);
 }
-return word_count;
+return (word_count);
 }
 /**
  * _strlen - length of string
@@ -26,7 +26,7 @@ int _strlen(char *str)
 {
 int i;
 i = 0;
-while(str[i] != '\0')
+while (str[i] != '\0')
 i++;
 return (i);
 }
