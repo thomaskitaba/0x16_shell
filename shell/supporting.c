@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _print_2d - print 2D array
+ * _print_2D - print 2D array
  * @av: argument vector
  * @argc: argument count
  * Return: void
