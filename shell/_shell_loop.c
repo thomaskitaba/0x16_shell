@@ -17,7 +17,7 @@ _putchar('$');
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 read = getline(&buffer, &len, stdin);
-if (feof(stdin) || (read <= 1))
+if (feof(stdin) || (read <= 0))
 {
 free(buffer);
 _free_2D(av_token, w_len);
@@ -37,5 +37,5 @@ _execve(av_token, NULL);
 }
 free(buffer);
 _free_2D(av_token, w_len);
-} while (result != 0 && buffer[read - 1] != '\n');
+} while (result != 0 && read != -1 && buffer[read - 1] != '\n');
 }
