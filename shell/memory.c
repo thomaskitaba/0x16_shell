@@ -12,6 +12,11 @@ for (int i = 0; i < rows; i++)
 free(token[i]);
 free(token);
 }
+/**
+ * create_buffer - Create a buffer object
+ * 
+ * Return: created 1d buffer 
+ */
 char *create_buffer(void)
 {
 char *buf;
@@ -20,6 +25,11 @@ if (!buf)
 return (NULL);
 return (buf);
 }
+/**
+ * create_2D_buffer - Create a buffer object
+ * @av: pointer to 2d ptr variable
+ * Return: created 2d buffer 
+ */
 char **create_2D_buffer(char **av)
 {
 int i;
