@@ -2,6 +2,7 @@
 /**
 * _strcspn - find \\n and replace it with \0
 *@c: char to be searched
+*@buff: buffer
 *Return: replace buf
 */
 int _strcspn(char *buf, char c)
