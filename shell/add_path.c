@@ -24,8 +24,8 @@ break;
 }
 }
 path_buffer = path_helper(path_arg, path_buffer, correction, default_len, path_len);
-if (res)
-return (res);
+if (path_buffer)
+return (path_buffer);
 else
 return (NULL);
 /*
