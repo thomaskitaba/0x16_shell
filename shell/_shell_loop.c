@@ -15,13 +15,13 @@ ssize_t read, len;
 do {
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
-putchar('$');
 read = getline(&buffer, &len, stdin);
-if (read == -1)
-{
+if (feof(stdin) || (read <= 1)) {
 free(buffer);
 _free_2D(av_token, w_len);
-return (-1);
+continue; // Start from the beginning of the loop
+} else {
+printf("$ ");
 }
 /*TODO: we have to remove the new line from buffer*/
 buffer[_strcspn(buffer, '\n')] = '\0';
