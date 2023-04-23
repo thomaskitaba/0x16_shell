@@ -2,6 +2,8 @@
 /**
  * tokenize_string - change string to 2D array
  * @str: string to be tokenized
+ * @token: token
+ * @len: length
  * Return: 1 on success, -1 on failur
  */
 char **tokenize_string(char *str, char **token, int *len)
@@ -19,8 +21,9 @@ return (NULL);
 return (token);
 }
 /**
- * 2_2d_string - change word to 2d word
+ * token - change word to 2d word
  * @string: string to be converted
+ * @av: argument vector
  * Return: 1 on success, -1 on faliur
  */
 int token(char **av, char *string)
