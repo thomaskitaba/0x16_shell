@@ -7,7 +7,7 @@
 char *add_path(char *path_arg, char *path_buffer)
 {
 char *default_path; /*TODO: to be deleted*/
-int path_len, res, default_len, buffer_len, correct;
+int path_len, res, default_len, buffer_len, correction;
 int i, k; /*TODO: to be deleted*/
 path_len = buffer_len = k = 0;
 default_path = "/bin/"; /*TODO: to be deleted*/
@@ -19,11 +19,11 @@ for (i = 0; i < default_len; i++)
 {
 if (default_path[i] != path_arg[i])
 {
-need_correction = 1;
+correction = 1;
 break;
 }
 }
-path_buffer = path_helper(path_arg, path_buffer, correct, default_len, path_len);
+path_buffer = path_helper(path_arg, path_buffer, correction, default_len, path_len);
 if (res)
 return (res);
 else
