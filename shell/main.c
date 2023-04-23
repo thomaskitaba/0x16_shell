@@ -11,7 +11,7 @@ int main(int argc, char **argv, char **env)
 int a;
 int mode; /*to accept returned value from hsh*/
 
-if (argc <= 1)
+if (argc <= 1 && !argv[1])
 mode = 1; /*interactive*/
 else
 mode = 0; /*command line mode*/

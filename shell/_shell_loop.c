@@ -10,7 +10,7 @@ int shell_loop_hsh( )
 {
 char *buffer;
 char **av_token;
-int i, result, w_len;
+int result, w_len;
 ssize_t read;
 size_t len;
 do {
