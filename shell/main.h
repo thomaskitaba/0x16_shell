@@ -43,7 +43,7 @@ char **create_2D_buffer(char **av);
 int _get_word_count(char *str, char *delim);
 int (*get_builtin_cmd(char *s))(char **);
 int _strcspn(char *buf, char c);
-int hsh(int argc, char **argv, int mode);
+int hsh();
 char **tokenize_string(char *str, char **token, int *len);
 int token(char **av, char *string);
 int _exit_shell(char **string);
