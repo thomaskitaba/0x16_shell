@@ -21,7 +21,7 @@ if (feof(stdin) || (read <= 1))
 {
 free(buffer);
 _free_2D(av_token, w_len);
-continue; // Start from the beginning of the loop
+continue;
 }
 buffer[_strcspn(buffer, '\n')] = '\0';
 result = strcmp(buffer,  "exit");
