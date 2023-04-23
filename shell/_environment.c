@@ -48,5 +48,6 @@ return (i);
 int _exit_shell(char **string)
 {
 int result = 0;
+exit(1);
 return (result);
 }
