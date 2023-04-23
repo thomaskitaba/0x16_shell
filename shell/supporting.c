@@ -7,9 +7,9 @@
  */
 void _print_2D(char **av, int argc)
 {
-  int i; 
+int i;
 for (i = 0; i < argc - 1; i++)
 {
-  printf("%s\t", av[i]);
+printf("%s\t", av[i]);
 }
 }
