@@ -4,7 +4,7 @@
  * @str: string
  * @delim: delimeter
  * @token: 2D ponter 2 hold tokenized cmd
- * Return: int 
+ * Return: int
  */
 int _strtok(char *str, char *delim, char **token)
 {
@@ -20,12 +20,12 @@ buffer = add_path(word, buffer);
 /*if path was corrected and added */
 while(word && w_count <= WORD_COUNT)
 {
-  if (w_count == 0 && buffer)
-    strcpy(token[w_count], buffer);
-    else
-  strcpy(token[w_count], word);
-  w_count++;
-  word = strtok(NULL, delim); 
+if (w_count == 0 && buffer)
+strcpy(token[w_count], buffer);
+else
+strcpy(token[w_count], word);
+w_count++;
+word = strtok(NULL, delim);
 }
 token[w_count] = NULL;
 /*TODO: add token to info_t->argc   and info_t->argv*/
