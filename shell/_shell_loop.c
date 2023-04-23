@@ -27,9 +27,9 @@ _printenv(environ);
 if (read == -1 || result == 0)
 {
 free(buffer);
-return (-1);
+continue;
 }
-if (read > 0 && buffer[0] != '')
+if (read > 0)
 {
 w_len = 0;
 av_token = tokenize_string(buffer, av_token, &w_len);
