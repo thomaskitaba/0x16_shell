@@ -1,7 +1,8 @@
 #include "main.h"
 /**
+ * add_path - add path to tokens index 0
  * @path_arg: path argument at index 0
- * @path_buffer: buffer holding string
+ * @path_buf: buffer holding string
  * Return: append path return1,  path not appended, -1
  */
 char *add_path(char *path_arg, char *path_buf)
