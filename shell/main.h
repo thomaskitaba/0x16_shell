@@ -49,7 +49,7 @@ int token(char **av, char *string);
 int _exit_shell(char **string);
 int _tokenize(char **av, char **argv, int argc);
 int _strcspn(char *buf, char c);
-char * add_path(char *path_arg, char *path_buffer);
+char *add_path(char *path_arg, char *path_buffer);
 void _print_2D(char **av, int argc);
 int _printenv(char **env);
 
