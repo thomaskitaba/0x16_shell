@@ -12,8 +12,8 @@ mode; /*to accept returned value from hsh*/
 
 if (argc <= 1)
 mode = 1; /*interactive*/
-else 
+else
 mode = 0; /*command line mode*/
-hsh(argc, argv, mode); 
+hsh(argc, argv, mode);
 return (0);
 }
