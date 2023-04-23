@@ -35,9 +35,8 @@ src_len = (int)strlen(src);
 for (i = 0; i < src_len; i++)
 {
 dest[dest_len + i] = src[i];
-if (i + 1 == src_len) {
+if (i + 1 == src_len)
 dest[dest_len + i + 1] = '\0';
-}
 }
 return (dest);
 }
