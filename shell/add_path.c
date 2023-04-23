@@ -15,7 +15,7 @@ def_len = _strlen(def_path);
 path_len = _strlen(path_arg);
 correction = res = 0;
 /*check if /bin/ exitst in path_arg*/
-for (i = 0; i < default_len; i++)
+for (i = 0; i < def_len; i++)
 {
 if (def_path[i] != path_arg[i])
 {
