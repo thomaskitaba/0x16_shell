@@ -13,7 +13,7 @@ path_len = buffer_len = k = 0;
 default_path = "/bin/"; /*TODO: to be deleted*/
 default_len = _strlen(default_path);
 path_len = _strlen(path_arg);
-correct = res = 0;
+correction = res = 0;
 /*check if /bin/ exitst in path_arg*/
 for (i = 0; i < default_len; i++)
 {
