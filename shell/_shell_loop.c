@@ -16,14 +16,12 @@ do {
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 read = getline(&buffer, &len, stdin);
+printf("$ ");
 if (feof(stdin) || (read <= 1)) {
-  printf("$ ");
 free(buffer);
 _free_2D(av_token, w_len);
 continue; // Start from the beginning of the loop
-} else {
-printf("$ ");
-}
+} 
 /*TODO: we have to remove the new line from buffer*/
 buffer[_strcspn(buffer, '\n')] = '\0';
 result = strcmp(buffer,  "exit");
