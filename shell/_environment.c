@@ -42,12 +42,18 @@ return (i);
 }
 /**
  * _exit_shell - exits the shell
- * @string: string passed
+ * @env: string passed
  * Return: successful exit 0, else -1
  */
-int _exit_shell(char **string)
+int _exit_shell(char **env)
 {
-int result = 0;
+int result;
+if (env)
+{
+result = 0;
 exit(1);
+}
+else
+resutl = 1;
 return (result);
 }
