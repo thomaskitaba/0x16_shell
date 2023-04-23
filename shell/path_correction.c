@@ -1,11 +1,11 @@
 #include "main.h"
 /**
- * path_correction -
- * @path_arg: arg to be tokenized
- * @path_buffer: buffer to hold path
+ * path_correction - add /bin/ as correction
+ * @p_a: arg to be tokenized
+ * @p_b: buffer to hold path
  * @d_len: default length
  * @p_len: path length
- * @c_n: need correction
+ * @n_c: need correction
  * Return: 1 on success, 0 on failur
  */
 char *path_helper(char *p_a, char *p_b, int n_c, int d_len, int p_len)
