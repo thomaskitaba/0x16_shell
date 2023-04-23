@@ -13,10 +13,11 @@ char **av_token;
 int i, result, w_len;
 ssize_t read, len;
 do {
+_putchar('$');
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 read = getline(&buffer, &len, stdin);
-_putchar('$');
+
 if (feof(stdin) || (read <= 1)) {
 _putchar('$');
 free(buffer);
