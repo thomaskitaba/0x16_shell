@@ -14,8 +14,8 @@ free(token);
 }
 /**
  * create_buffer - Create a buffer object
- * 
- * Return: created 1d buffer 
+ *
+ * Return: created 1d buffer
  */
 char *create_buffer(void)
 {
@@ -28,7 +28,7 @@ return (buf);
 /**
  * create_2D_buffer - Create a buffer object
  * @av: pointer to 2d ptr variable
- * Return: created 2d buffer 
+ * Return: created 2d buffer
  */
 char **create_2D_buffer(char **av)
 {
