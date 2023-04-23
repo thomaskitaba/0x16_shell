@@ -18,6 +18,7 @@ buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 read = getline(&buffer, &len, stdin);
 _putchar('$');
 if (feof(stdin) || (read <= 1)) {
+_putchar('$');
 free(buffer);
 _free_2D(av_token, w_len);
 continue; // Start from the beginning of the loop
