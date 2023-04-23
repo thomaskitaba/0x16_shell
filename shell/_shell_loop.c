@@ -19,7 +19,8 @@ putchar('$');
 read = getline(&buffer, &len, stdin);
 /*TODO: we have to remove the new line from buffer*/
 buffer[_strcspn(buffer, '\n')] = '\0';
-if ((result = strcmp(buffer,  "exit")) == 0);
+result = strcmp(buffer,  "exit");
+if (result == 0);
 _exit_shell(environ);
 if (strcmp(buffer, "printenv") == 0)
 _printenv(environ);
