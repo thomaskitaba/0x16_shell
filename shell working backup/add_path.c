@@ -6,14 +6,14 @@
  */
 char *add_path(char *path_arg, char *path_buffer)
 {
-char *default_path; /*TODO: to be deleted*/
-int path_len, res, default_len, buffer_len, correct;
-int i, k; /*TODO: to be deleted*/
+char *default_path;
+int i, k, path_len, default_len, buffer_len, new_len, need_correction;
+
 path_len = buffer_len = k = 0;
-default_path = "/bin/"; /*TODO: to be deleted*/
+default_path = "/bin/";
 default_len = _strlen(default_path);
 path_len = _strlen(path_arg);
-correct = res = 0;
+need_correction = 0;
 /*check if /bin/ exitst in path_arg*/
 for (i = 0; i < default_len; i++)
 {
@@ -23,14 +23,9 @@ need_correction = 1;
 break;
 }
 }
-path_buffer = path_helper(path_arg, path_buffer, correct, default_len, path_len);
-if (res)
-return (res);
-else
-return (NULL);
-/*
-if (correct == 1)
+if (need_correction == 1)
 {
+/*append /bin/ and ls*/
 strcpy(path_buffer, default_path);
 for (i = default_len; i < default_len + path_len; i++)
 {
@@ -40,7 +35,7 @@ k++;
 path_buffer[i] = '\0';
 return (path_buffer);
 }
-if (correct == 0)
+if (need_correction == 0)
 {
 if (path_len <= 5)
 {
@@ -53,5 +48,4 @@ strcpy(path_buffer, path_arg);
 return (path_buffer);
 }
 }
-*/
 }

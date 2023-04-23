@@ -52,5 +52,6 @@ int _strcspn(char *buf, char c);
 char *add_path(char *path_arg, char *path_buffer);
 void _print_2D(char **av, int argc);
 int _printenv(char **env);
+char *path_correction(char *p_a, char *p_b, int n_c, int d_len, int p_len);
 
 #endif
