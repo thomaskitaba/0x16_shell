@@ -48,12 +48,13 @@ return (i);
 int _exit_shell(char **env)
 {
 int result;
+
+result = 1;
 if (env)
 {
 result = 0;
 exit(1);
 }
-else
-resutl = 1;
+
 return (result);
 }
