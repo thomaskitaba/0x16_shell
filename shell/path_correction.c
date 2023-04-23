@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * path_correction - add /bin/ as correction
+ * path_helper - add /bin/ as correction
  * @p_a: arg to be tokenized
  * @p_b: buffer to hold path
  * @d_len: default length
