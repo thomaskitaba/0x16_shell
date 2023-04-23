@@ -28,30 +28,4 @@ if (path_buffer)
 return (path_buffer);
 else
 return (NULL);
-/*
-if (correct == 1)
-{
-strcpy(path_buffer, default_path);
-for (i = default_len; i < default_len + path_len; i++)
-{
-path_buffer[i] = path_arg[k];
-k++;
-}
-path_buffer[i] = '\0';
-return (path_buffer);
-}
-if (correct == 0)
-{
-if (path_len <= 5)
-{
-printf("it is a directory");
-return (NULL);
-}
-else
-{
-strcpy(path_buffer, path_arg);
-return (path_buffer);
-}
-}
-*/
 }
