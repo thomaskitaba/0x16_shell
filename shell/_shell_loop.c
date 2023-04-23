@@ -29,7 +29,7 @@ if (read == -1 || result == 0)
 free(buffer);
 return (-1);
 }
-if (read > 0 && buffer != "")
+if (read > 0 && buffer[0] != '')
 {
 w_len = 0;
 av_token = tokenize_string(buffer, av_token, &w_len);
