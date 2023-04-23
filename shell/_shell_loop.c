@@ -17,6 +17,12 @@ av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 putchar('$');
 read = getline(&buffer, &len, stdin);
+if (len == 0)
+{
+free(buffer);
+_free_2D(av_token, w_len);
+continue;
+}
 /*TODO: we have to remove the new line from buffer*/
 buffer[_strcspn(buffer, '\n')] = '\0';
 result = strcmp(buffer,  "exit");
@@ -27,7 +33,7 @@ _printenv(environ);
 if (read == -1 || result == 0)
 {
 free(buffer);
-continue;
+return (-1);
 }
 if (read > 0)
 {
