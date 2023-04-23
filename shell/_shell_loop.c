@@ -21,6 +21,7 @@ if (read == -1 || result == 0)
 {
 free(buffer);
 _free_2D(av_token, w_len);
+continue;
 return (-1);
 }
 /*TODO: we have to remove the new line from buffer*/
