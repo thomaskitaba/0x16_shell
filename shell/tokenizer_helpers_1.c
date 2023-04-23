@@ -57,6 +57,6 @@ continue;
 strcpy(av[k], argv[i]);
 k++;
 }
-av[argc-1] = NULL;
+av[argc - 1] = NULL;
 return (0);
 }
