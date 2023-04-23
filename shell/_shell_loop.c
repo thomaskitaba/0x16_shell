@@ -16,7 +16,6 @@ do {
 av_token = create_2D_buffer(av_token);
 buffer = (char *)malloc(sizeof(char) * BUFFER_SIZE);
 read = getline(&buffer, &len, stdin);
-printf("$ ");
 if (feof(stdin) || (read <= 1)) {
 free(buffer);
 _free_2D(av_token, w_len);
@@ -28,7 +27,10 @@ result = strcmp(buffer,  "exit");
 if (result == 0)
 _exit_shell(environ);
 if (strcmp(buffer, "printenv") == 0)
+{
+printf("$ ");
 _printenv(environ);
+}
 if (read > 0)
 {
 w_len = 0;
