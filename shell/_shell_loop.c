@@ -6,12 +6,13 @@
  * @mode: open mode
  * Return: on exit 0, error -1, success 1
  */
-int shell_loop_hsh(int argc, char **argv, int mode)
+int shell_loop_hsh( )
 {
 char *buffer;
 char **av_token;
 int i, result, w_len;
-ssize_t read, len;
+ssize_t read;
+size_t len;
 do {
 _putchar('$');
 av_token = create_2D_buffer(av_token);

@@ -37,4 +37,5 @@ strcpy(p_b, p_a);
 return (p_b);
 }
 }
+return (NULL);
 }

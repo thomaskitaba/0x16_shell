@@ -8,7 +8,7 @@
 void _free_2D(char **token, int rows)
 {
 int i;
-for (int i = 0; i < rows; i++)
+for (i = 0; i < rows; i++)
 free(token[i]);
 free(token);
 }

@@ -6,15 +6,15 @@
  * @env: environment
  * Return: 0 on success
  */
-int main(int argc, char **argv, char **env)
+int main(int argc, char **argv)
 {
-int a;
+
 int mode; /*to accept returned value from hsh*/
 
 if (argc <= 1)
 mode = 1; /*interactive*/
 else
 mode = 0; /*command line mode*/
-hsh(argc, argv, mode);
+hsh();
 return (0);
 }

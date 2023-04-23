@@ -8,10 +8,7 @@
  */
 int hsh(int argc, char **argv, int mode)
 {
-int i, hsh_val;
-ssize_t read;
-size_t len;
-char **av;
+int hsh_val;
 
 if (argc == 1 && (strcmp(argv[0], "./hsh") == 0))
 {

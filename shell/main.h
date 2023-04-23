@@ -32,7 +32,7 @@ int (*builtin_f)(char **);
 
 int _putchar(char c);
 int _execve(char **av, char **env);
-int shell_loop_hsh(int argc, char **argv, int mode);
+int shell_loop_hsh();
 int _strtok(char *str, char *delim, char **token);
 int _strlen(char *str);
 char *_strcat(char *dest, char *src);

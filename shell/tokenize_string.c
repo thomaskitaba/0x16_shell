@@ -10,7 +10,7 @@ char **tokenize_string(char *str, char **token, int *len)
 {
 /*char str[] = "thomas kitaba feyissa";*/
 char *delimeter = " ";
-int i, w_count;
+int w_count;
 w_count = 0;
 /*malloc for 2d array **token  row*/
 w_count = _strtok(str, delimeter, token);
