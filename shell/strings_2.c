@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-* _strcspn - find \\n and replace it with \0 
+* _strcspn - find \\n and replace it with \0
 *@c: char to be searched
 *Return: replace buf
 */
@@ -9,11 +9,13 @@ int _strcspn(char *buf, char c)
 int i, n;
 if (!buf)
 return (0);
-for (i = 0, n = (int)strlen(buf) ; i < n; i++) {
-  if (buf[i] == c) {
-    return (i);
-    break;
-  }
+for (i = 0, n = (int)strlen(buf) ; i < n; i++)
+{
+if (buf[i] == c)
+{
+return (i);
+break;
+}
 }
 return (0);
 }
@@ -30,10 +32,11 @@ dest_len = (int)strlen(dest);
 src_len = (int)strlen(src);
 
 /* first find the null char*/
-for (i = 0; i < src_len; i++) {
+for (i = 0; i < src_len; i++)
+{
 dest[dest_len + i] = src[i];
 if (i + 1 == src_len) {
-	dest[dest_len + i + 1] = '\0';
+dest[dest_len + i + 1] = '\0';
 }
 }
 return (dest);
