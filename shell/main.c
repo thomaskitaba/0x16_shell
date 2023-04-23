@@ -7,13 +7,13 @@
  */
 int main(int argc, char **argv, char **env)
 {
-  int a;
-  mode; /*to accept returned value from hsh*/
-  
-  if (argc <= 1)
-  mode = 1; /*interactive*/
-  else 
-  mode = 0; /*command line mode*/
-  hsh(argc, argv, mode); 
-  return (0);
+int a;
+mode; /*to accept returned value from hsh*/
+
+if (argc <= 1)
+mode = 1; /*interactive*/
+else 
+mode = 0; /*command line mode*/
+hsh(argc, argv, mode); 
+return (0);
 }
