@@ -29,10 +29,7 @@ result = strcmp(buffer,  "exit");
 if (result == 0)
 _exit_shell(environ);
 if (strcmp(buffer, "printenv") == 0)
-{
 _printenv(environ);
-_putchar('$');
-}
 if (read > 0)
 {
 w_len = 0;
