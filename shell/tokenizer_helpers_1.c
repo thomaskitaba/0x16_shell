@@ -38,10 +38,11 @@ return (0);
 }
 
 /**
- * _to_cmd - argv to 2D array
+ * _tokenize - argv to 2D array
  * @av: new argument vector
  * @argv:  argument vector
  * @argc: argument count
+ * Return: 0
  */
 int _tokenize(char **av, char **argv, int argc)
 {
